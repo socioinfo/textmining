@@ -1,0 +1,8 @@
+x <- read.csv("all2.csv", header=F, row.names=1, encoding='UTF_8')
+d <- dist(x)
+clst <- hclust(d, method="ward.D")
+png(file="cluster.png",width=1200,height=600)
+par(family = "HiraKakuProN-W3")
+par(pin=c(14, 6))
+plot (clst)
+dev.off()
