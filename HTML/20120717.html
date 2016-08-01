@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>数独を解く | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2012年7月17日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20120717.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-1926"><a href="http://easy.mri.co.jp/20120717.html" rel="bookmark" title="数独を解く">数独を解く</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<p>
+「数独」と呼ばれるパズルをご存知だろうか。
+またの名をナンバープレイス、あるいは略してナンプレともいう。
+一定のルールに従って、9×9のマス目に数字を埋めていくパズルである。
+</p>
+<p>
+ルールはいたって簡単で、制約は「タテヨコの各列、および、全体を9分割して3×3に区切った各領域で、いずれも1から9までの数字が重複なく配置されるように数字を並べなさい」というだけのもの。
+いくつかのマスにはあらかじめ初期値が与えられており、それをヒントに空いているマスを埋めていく。
+制約を満たしつつ全てのマス目に数字を書き入れることができれば、それがゴールである。
+</p>
+<p>
+いささか古い記事ではあるが、<a href="http://gamez.itmedia.co.jp/games/articles/1008/23/news093.html" target="_blank">「解けたら天才！ フィンランドの数学者が作った「世界一難しい数独」」</a>と題した記事がある。
+この記事で紹介されている「世界一難しい数独」とは、次のような問題だ。
+</p>
+<div id="attachment_2004" class="wp-caption aligncenter" style="width: 410px"><img src="http://park42.mri.co.jp/easy/wp-content/uploads/2012/07/sudoku.png" alt="世界一難しい数独" title="sudoku" width="400" height="399" class="size-full wp-image-2004" /><p class="wp-caption-text">世界一難しい数独（ITmediaより）</p></div>
+<p>
+数独を解くことに関してはいささか自信があった私だが、確かにこの問題は難しく、かなりの歯ごたえを感じた。
+どうやら一朝一夕には解けそうもない。
+ついに、業を煮やした私は、計算機の力を借りて解くことにした。
+</p>
+<p>
+もっとも、既存の数独を解くソフトウェアを利用するのではつまらない。
+せっかくなので、解を探索するプログラムを書くところから始めてみる。
+</p>
+<h4>解の探索プログラム</h4>
+<p>
+この手の問題に対する最も単純な解き方は、力任せに解を探していく方法である。
+アルゴリズムの骨子は、以下のとおり。
+</p>
+<ol>
+<li>
+空いているマスを、端から順番に試していく。
+まずは、途中まで問題なく進んできたとして、対象とするマスを考えてみる。
+このマスに、1から9までの数字を順番に埋めて試すことを考えよう。
+</li>
+<li>
+数字を入れて、その段階で制約を満たしているかどうか、判定する。
+</li>
+<li>
+制約を満たしているなら、次の空いているマスに進もう。対象とするマスを1つ進めて、1から次の手順を始めよう。
+</li>
+<li>
+制約を満たしていないときは、数字を更新して、2.に戻る。
+</li>
+<li>
+1から9まで全て試してみて、どれもダメだったら、ここまでの手順に問題があったはず。
+ここまで埋めてきたマスを1つ戻し、やり直してみる。
+</li>
+</ol>
+<p>
+これは、再帰呼び出しを利用した（深さ優先）探索が適用できる問題の典型的な例だ。
+再帰呼び出しの終端条件は、制約を満たしたまま、空いている最後のマスまで到達したことに相当する。
+</p>
+<p>
+これをCふうの擬似コードで表現すると、次のように書くことができる。
+なお、関数check(cell*)は、引数で取るマス目が制約を満たしているか否かを判定するための関数とする。
+関数の構造を右側のコメントで示した。とても単純な構成であることが分かるだろう。
+</p>
+<blockquote><code><pre>
+boolean solver(cell* target) {
+  if (target == NULL) return TRUE; // 最後まで到達したからOK
+
+  for (int i = 1; i <= 9; i++) {
+    target->val = i;                     // i を入れてみて
+    if ((check(target) == TRUE) &#038;&#038;       // 現段階がOKで
+        (solver(target->next) == TRUE))  // その先もOKなら
+       return TRUE;                      // OKを返そう
+  }
+  target->val = 0;           // どれもダメだったので空にして
+  return FALSE;              // NGを返そう（やり直し）
+}
+</pre></code></blockquote>
+<p>
+ここで、構造体cellの定義は下記のとおり。
+</p>
+<blockquote><code><pre>
+typedef struct _cell cell;
+struct _cell {
+  unsigned char val;  // マスの値
+  cell* next;         // 次に空いているマスへのポインタ
+};
+</pre></code></blockquote>
+<p>
+この構造体は、マス目の値と、別の構造体cellデータへのポインタを持つ。
+また、このポインタを利用して、あらかじめ次に空いているマスへのポインタを利用したリンク構造を事前の準備で実現しているものとしよう。
+再帰による解の探索過程では、このリンク構造を上手に使い、空いているマスを辿っていく。
+リンク構造の終端はNULL、すなわち次を指すポインタがNULLであることで、最後のマスまで到達したかどうかを判定できるというしくみだ。
+</p>
+<p>
+前処理や制約の判定処理まで含め、Cで記述したコードを本稿の末尾に示しておく。
+クイック・ハックで書いたコードなので、多少の改善を加える余地、リファクタリングすべきコードがまだ残されている点には目をつぶって頂きたい。
+本プログラム、解を探索するアルゴリズム部分の記述は全体の1割に満たない。
+データ構造をうまく構築することで、すっきりと記述できることを確認できるだろう。
+</p>
+<h4>様々なアプローチによる数独ソルバー</h4>
+<p>
+世の中にはいろいろなことを考える人がいるもので、<a href="http://codezine.jp/article/detail/1627" target="_blank">SQLで数独を解くという解説</a>もある。
+確かに条件に合致した検索を得意とするSQLや、宣言型プログラミングのPrologなどは、この手のパズルを解くためのプログラミングと親和性が高いだろう。
+</p>
+<p>
+また、本稿で紹介したブルートフォース的なアプローチではなく、人間の思考を辿るような、よりエレガントな解法による解の探求を実現しようという試みもある。
+例えば<a href="http://homepage3.nifty.com/funahashi/game/game799.html" target="_blank">このソルバー</a>は、いくつかの定石に従って部分的な解を求めた後で、虱潰しの探索を試みる。
+本稿で試した問題を実際に試してみると、けっこうな時間がかかったのち、「超むつかしい（別解あるかも？）」というメッセージとともに正解が出た。
+</p>
+<p>
+解の探索方法は本稿で紹介したものと同じながら、探索の過程を<a href="http://sudoku.klaas.nl/" target="_blank">可視化して示してくれるツール</a>もある。
+可視化のスピードを変化させることができ、探索の手順を確認しやすくなっている。
+</p>
+<p>
+数独だけでなく、様々なパズルをプログラミングで解くという課題は、パズルに対する搦め手からのチャレンジだ。
+皆さんも、夏休みの宿題に、頭の体操として挑戦してみてはいかがだろうか。
+</p>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul>
+ <li><a href="http://gamez.itmedia.co.jp/games/articles/1008/23/news093.html" target="_blank">日々是遊戯：解けたら天才！ フィンランドの数学者が作った「世界一難しい数独」</a></li>
+ <li><a href="http://codezine.jp/article/detail/1627" target="_blank">SQLによる数独の解法</a></li>
+ <li><a href="http://homepage3.nifty.com/funahashi/game/game799.html" target="_blank">無料数独解法プログラム/ナンプレ解く/SUDOKU SOLVER</a></li>
+ <li><a href="http://puzzle.lavot.com/java/numberplace/index.html" target="_blank">My Shelf : ナンバープレース（数独）</a>&#8230; このソルバーは本稿の問題を解けなかった</li>
+ <li><a href="http://sudoku.klaas.nl/" target="_blank">Sudoku Java Solver Applet by Klaas</a>（英語）</li>
+ <li><a href="http://www.cuspy.org/diary/2012-06-29" target="_blank">数独を解く(画像解析) &#8212; cuspy diary</a>：画像解析で印刷された数独パズルを解こうというお話</li>
+ <li><a href="http://d.hatena.ne.jp/arigata3/20110813/1313233174" target="_blank">世界一難しい数独を解く</a>：Microsoft Solver Foundation (MSF)を使って解こうという挑戦。本稿と同じ問題にチャレンジ</li>
+</ul>
+<h4>（付録）Cによる数独ソルバー</h4>
+<blockquote><code><pre>
+#include &lt;stdio.h>
+#include &lt;string.h> // for memset()
+#include &lt;math.h>   // for floor()
+
+#define FALSE 0
+#define TRUE  1
+
+typedef struct _cell cell;
+typedef cell* cell_p;
+
+struct _cell {
+  unsigned char val;
+  cell_p	row [9];
+  cell_p	col [9];
+  cell_p	area[9];
+
+  cell_p	next;
+};
+
+cell matrix[81];
+
+unsigned char rawdata[81] = 
+  {0,0,5,3,0,0,0,0,0,
+   8,0,0,0,0,0,0,2,0,
+   0,7,0,0,1,0,5,0,0,
+   4,0,0,0,0,5,3,0,0,
+   0,1,0,0,7,0,0,0,6,
+   0,0,3,2,0,0,0,8,0,
+   0,6,0,5,0,0,0,0,9,
+   0,0,4,0,0,0,0,3,0,
+   0,0,0,0,0,9,7,0,0};
+
+cell_p
+prepare_matrix ()
+{
+  int x, y, i;
+  cell_p target = matrix;
+  for (y = 0; y < 9; y++)
+    for (x = 0; x < 9; x++)
+    {
+      // set value
+      target->val = rawdata[y*9+x];
+
+      // set row,col
+      int x0, y0, u, v;
+      for (i = 0; i < 9; i++)
+      {
+        target->row[i] = &#038;(matrix[i*9+x]);
+        target->col[i] = &#038;(matrix[y*9+i]);
+      }
+
+      // set area
+      x0 = floor(x / 3) * 3;
+      y0 = floor(y / 3) * 3;
+      i = 0;
+      for (v = y0; v < y0 + 3; v++)
+        for (u = x0; u < x0 + 3; u++)
+        {
+          target->area[i] = &#038;(matrix[v*9+u]);
+          i++;
+        }
+
+      target++;
+    }
+
+  cell_p next = NULL;
+  cell_p head = NULL;
+  for (i = 80; i >= 0; i--)
+  {
+    if (rawdata[i] == 0)
+    {
+      head = matrix + i;
+      head->next = next;
+      next = head;
+    }
+  }
+
+  return head;
+}
+
+void
+print_matrix ()
+{
+  int x, y;
+  for (y = 0; y < 9; y++)
+  {
+    for (x = 0; x < 9; x++)
+      printf (" %d", matrix[y*9+x].val);
+    printf ("\n");
+  }   
+}
+
+int
+check (cell_p target)
+{
+  unsigned char tmp[10];
+  int i;
+
+  memset (tmp, 0, 10);
+  for (i = 0; i < 9; i++)
+  {
+    int val = target->row[i]->val;
+    if ((val > 0) &#038;&#038; (tmp[val] > 0)) return FALSE;
+    tmp[val] = val;
+  }
+
+  memset (tmp, 0, 10);
+  for (i = 0; i < 9; i++)
+  {
+    int val = target->col[i]->val;
+    if ((val > 0) &#038;&#038; (tmp[val] > 0)) return FALSE;
+    tmp[val] = val;
+  }
+
+  memset (tmp, 0, 10);
+  for (i = 0; i < 9; i++)
+  {
+    int val = target->area[i]->val;
+    if ((val > 0) &#038;&#038; (tmp[val] > 0)) return FALSE;
+    tmp[val] = val;
+  }
+  return TRUE;
+}
+
+int
+solver (cell_p target)
+{
+  if (target == NULL) return TRUE;
+
+  int ctr;
+  for (ctr = 1; ctr <= 9; ctr++)
+  {
+    target->val = ctr;
+    if ((check (target) == TRUE) &#038;&#038;
+        (solver (target->next) == TRUE)) return TRUE;
+  }
+  target->val = 0;
+
+  return FALSE;
+}
+
+int
+main (int argc, char** argv) 
+{
+  cell_p target = prepare_matrix ();
+
+  printf("Problem is ... \n");
+  print_matrix ();
+  printf("----------\n");
+
+  if (solver (target) == FALSE)
+  {
+    printf ("no answer\n");
+    return -1;
+  }
+  print_matrix ();
+
+  return 0;
+}
+</pre></code></blockquote>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20120703.html">2012-07-03 古くて新しいレガシーマイグレーション</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20120731.html">2012-07-31 クラウドサービスには保険による評価指標を</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

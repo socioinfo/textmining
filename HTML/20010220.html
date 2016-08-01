@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>C言語はなぜ廃れないか | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2001年2月20日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20010220.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-176"><a href="http://easy.mri.co.jp/20010220.html" rel="bookmark" title="C言語はなぜ廃れないか">C言語はなぜ廃れないか</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>昨年暮マイクロソフトはC++、 Javaに代わる新しいプログラミング言語としてのC#言語を発表した。
+C#は、マイクロソフトが今後提唱していく .NET (ドットネット)の中核を担う言語になるという。</p>
+<p>一方で、Linuxやその他のオープンソースプロダクトなど、 いまだC言語で記述されているプロジェクトは多い。
+C++、Java、perl、ruby &hellip; などいわゆる高級言語とされているプログラミング言語花盛りのなかで、
+ことシステム記述言語としてC言語が現役の座を譲らないその理由は何だろう。</p>
+<h4>高級言語のもたらしたもの</h4>
+<p>Cは1970年代前半に開発された、 いまとなっては相当歴史を持つプログラミング言語である。 今日までの積み重ねにより、
+膨大な開発者の数に支えられていることが主たる要因のひとつであることはもっともだろうが、
+今日のCの稼働率ははたしてそれだけの理由だろうか。</p>
+<p>Cの誕生から今日まで、Cを改良したC++、 あらゆるプラットフォームで実行できることを理想として掲げた Java など、
+様々な高級言語が提案されてきた。 これらにはそれなりに流行しているものもあれば、 いまとなっては廃れてしまったものもある
+(参考として代表的なプログラミング言語を末尾に挙げておいた)。</p>
+<p>現代的なプログラミング言語には、 ひとつのキーワードとしてオブジェクト指向の概念が必須のものとなっている。
+その他にも、ガベージコレクションなど動的なメモリ管理や、スレッド処理、 エラー処理のための構文など、様々な工夫が採り入れられている。
+しかしこれらの機能は、本来のCには無い。</p>
+<h4>新たな言語の問題点</h4>
+<p>プログラミング言語それ自身の研究が進み、 新たな言語には様々な機能が追加されてきたにもかかわらず、
+Cにとって代わるだけの言語が現れていないのは何故だろうか。</p>
+<h5><font color="#880000">・理解の難しさ</font></h5>
+<p>まずC言語には非常にシンプルであるという利点がある。 C++ や Java で開発を始めるまえに、
+オブジェクト指向の理解でつまずくプログラマもいることだろう。
+プログラミングの手始めとしてはCはとっつきやすいプログラム言語である。</p>
+<p>もっともCも使いこなすためには技術が必要だ。熟練のプログラマであれば、 Cをオブジェクト指向的に記述することも可能である。
+また様々なライブラリを活用して新言語と同等の機能を活用することもできる。</p>
+<h5><font color="#880000">・言語実装の不具合</font></h5>
+<p>Cは他の言語に比べればかなり低レベルな言語である。 他の高級言語では、より抽象度を高めてその記述を人間のロジックに近づけている。
+ところがそこにバグが入り込む余地が生じているのである。</p>
+<p>例えばJavaや Visual Basic などで開発をしていると、
+プログラミングではどうにも避けられない問題点にぶつかることがある。
+調べてみると、言語のバグリストに載っていたりしてがっかりする。</p>
+<p>オープンソースの言語処理系であればまだ手の出しようがあるが、 一般にはブラックボックス化されていることも多く、
+不具合の修正は諦めざるをえない。 上記のようにバグレポートが既にあればまだマシなほうかもしれない。
+不幸にも新たなバグであったとすると、 それを回避する手だてとしては、 言語ベンダにバグレポートを送り修正を願うのみだ。</p>
+<h5><font color="#880000">・いろいろな制限</font></h5>
+<p>現在はJITやHotSpotといった様々な新技術によってだいぶ改善されてきてはいるが、
+Javaが当初から懸念されていたのはその実行の速度である。 またiアプリとして携帯電話に搭載されるJavaも、
+ハードウェアの制約もありかなりの制限が加えられている。</p>
+<p>Cであれば、 アプリケーション性能はほとんどハードウェアの制限に近いところまでチューニングすることが可能である。
+しかしその他の言語では、その言語の抽象度が高いほど、
+プログラミングの容易さと引替えに各種の制限を我慢しなければならなくなっている。</p>
+<p>これもブラックボックス化の弊害のひとつといえよう。</p>
+<h4>実はオペレーティングシステムも</h4>
+<p>さていままでの話は実はオペレーティングシステム(OS)についても同じことがいえる。
+プログラミング言語とOSはコンピュータの両輪として情報処理のインフラを提供する。</p>
+<p>問題が多いインフラの上では真に良いものは産まれない、 ということを、情報処理技術開発者のひとりとして昨今は切に感じている。
+OSや言語などプラットフォームを提供するベンダには、更なる奮起を期待したい。</p>
+<p>多機能で不確実な実装は、もうそろそろ勘弁願いたい。 シンプルかつ確実な、力強い言語とOSを望むところである。</p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>代表的な高級言語の関連リンク
+<ul><li>C/C++だけでなくさまざまな言語のプログラムを処理できるGNUのコンパイラ、 <a href="http://gcc.gnu.org/" target="new">gcc</a></li>
+<li>米サン・マイクロシステムズが開発した Java
+<ul><li>本家 <a href="http://www.javasoft.com/" target="new">JavaSoft</a>(英語)</li>
+<li>日本におけるJavaユーザ研究会: <a href="http://www.java-conf.gr.jp/" target="new">Javaカンファレンス</a></li>
+</ul></li>
+<li><a href="http://www.ruby-lang.org/ja/" target="new">Rubyホームページ</a></li>
+<li>日本におけるCOBOLの普及を目的とした <a href="http://www.cobol.gr.jp/" target="new">COBOLコンソーシアム</a></li>
+<li>FORTRANの情報は <a href="http://www.fortran.com/fortran/" target="new">ここ</a> に詳しい(英語)</li>
+<li>Prolog の普及を図る <a href="http://www.ap.kagu.sut.ac.jp/PAJ/" target="new">日本Prolog協会</a></li>
+<li>Lispユーザ会の主催する <a href="http://nserv.ei.nsc.co.jp:8884/syspro/whatnew/LISP/Lisp-User.html" target="new">Lisp User Group Meeting</a></li>
+<li>マイクロソフトのWindowsソフトウェア開発用言語
+<ul><li><a href="http://www.microsoft.com/japan/developer/vbasic/" target="new">Visual Basic</a></li>
+<li><a href="http://www.microsoft.com/japan/developer/visualc/" target="new">Visual C</a></li>
+<li><a href="http://www.microsoft.com/japan/presspass/releases/nl120600vs.htm" target="new">C# 発表に関する報道資料</a></li>
+</ul></li>
+</ul></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20010213.html">2001-02-13 新しいインターネットの入り口、音声ポータル</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20010227.html">2001-02-27 人工無脳の逆襲</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>物理シミュレーションへの誘い（前編） | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2009年8月25日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20090825.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-588"><a href="http://easy.mri.co.jp/20090825.html" rel="bookmark" title="物理シミュレーションへの誘い（前編）">物理シミュレーションへの誘い（前編）</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<p>物理シミュレーションの歴史は、コンピュータの進化とともに発展してきた。
+最近では、様々な物理演算エンジンを手軽に利用できるようになっている。
+本稿では、物理シミュレーションの立場を振り返ってみることにしよう。</p>
+<h4>コンピュータの登場と物理演算<br /></h4>
+<p>コンピュータの始祖には諸説あるが、一般的には1946年に完成した<a href="http://ja.wikipedia.org/wiki/ENIAC" target="new">ENIAC（Electronic
+Numerical Integrator and
+Computer）</a>とされている（メモリにプログラムが格納されて実行される形式の、いわゆる「ノイマン型」コンピュータは、1949年に開発されたEDSACが最初のコンピュータと考えられる。）。ENIACは、ペンシルバニア大学において、ジョン・モークリー（John
+William Mauchly）とジョン・エッカート（John Presper
+Eckert）らにより開発されたコンピュータである。</p>
+<p>
+物理シミュレーションの話題を紹介するにあたっては、この「最初のコンピュータ」に触れないわけにはいかないだろう。なぜなら、ENIACこそ「弾道計算を目的として作られた」コンピュータだからだ。</p>
+<h4>軍事目的から民間応用・研究応用へ<br /></h4>
+<p>弾道計算は、物理演算のなかでは比較的シンプルなものといえる。
+基本的な考え方は放物線を描いて飛んでいく飛行物体の軌道を、物理法則に従って導けばよい。</p>
+<p>ただし正確なシミュレーションを実施しようとすると、なかなか難しいのも また事実だ。弾丸の形状によって空気の流れが発生するため、
+流体力学の要素も計算に含めなければならない。また空気抵抗の 存在も同様である。重力だけでなく、コリオリ力など様々な他の力も
+考慮する必要があり、さらに乱流やノイズの影響も無視できない。</p>
+<p>このような問題設定のもとで、コンピュータによる物理演算の技術開発は
+進められた。その成果は周辺技術へと波及していき、物理シミュレーションの 対象や応用分野も膨らんでいった。</p>
+<h4>工業製品への応用<br /></h4>
+<p>民間に応用が進んだ物理シミュレーションといえば、CAD（Computer Aided
+Design）に組み込まれた演算処理が思い浮かぶ。例えばCADで設計した物体を有限要素法などで応力を計算するシミュレーションがある。この計算により、そもそも構造物として実用に耐えうるものなのか、どの程度の衝撃に耐えられるのか、といった力学的なシミュレーションを行う。このシミュレーションを利用することで、実際に試作してテストする工程を大幅に削減することが可能になる。</p>
+<p><a href="http://ums.futene.net/" target="new">有限要素法</a>では、構造物を小さな要素に分割し、各接点の変異をそれぞれの制約に従った方程式を解くことで計算する。当然、要素は細かく分けたほうが計算の精度を上げることができる反面、計算量は膨大なものとなる。ここでもコンピュータの計算能力がものをいう。</p>
+<a href="20090902.html">後半</a>に続く。
+<h4>本文中のリンク・関連リンク：</h4>
+<ul><li>手軽に試せるオープンソース物理計算エンジンのいろいろ
+<ul><li><a href="http://code.google.com/p/chipmunk-physics/" target="new">Chipmunk Physics</a>：C言語によるもの（英語）</li>
+<li><a href="http://www.box2d.org/" target="new">Box2D</a>：OSS物理計算エンジンの草分け的存在（英語）</li>
+<li><a href="http://box2dflash.sourceforge.net/" target="new">Box2D
+Flash AS3</a>：Box2DをFlashのアクションスクリプトで利用できるようにしたもの。デモが興味深い（英語）</li>
+</ul></li>
+<li>Wikipediaによる<a href="http://ja.wikipedia.org/wiki/ENIAC" target="new">ENIAC</a>の説明。</li>
+<li><a href="http://ums.futene.net/" target="new">有限要素法</a>を易しく解説しているページ。</li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20090818.html">2009-08-18 消費者の心を掴む「体感型」売場作りへ</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20090902.html">2009-09-02 物理シミュレーションへの誘い（後編）</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

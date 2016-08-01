@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>人物認識の3つのステージ | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2002年7月9日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20020709.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-243"><a href="http://easy.mri.co.jp/20020709.html" rel="bookmark" title="人物認識の3つのステージ">人物認識の3つのステージ</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>カメラが捕らえた画像を解析し映っている人物の情報を自動的に認識する、 そのような技術の実現が様々な分野で求められている。
+ニーズの多さに対応するように画像認識でもとくに顔認識研究に携わる研究者は多く、 これまでに数多くの研究開発が行なわれてきた。</p>
+<p>ところでひとくちに顔あるいは人物の認識といえども、 その要求レベルと実現のための技術には様々な段階がある。
+本稿ではこれを三段階に分け、実現可能性と想定される応用対象を考えてみよう。</p>
+<h4>レベル1: 人物の抽出</h4>
+<p>まずは映像中に人物が含まれるかどうかを判定し、 その動作を追跡するような機能のレベルである。</p>
+<p>このような機能は監視カメラなどで求められる。 常に映像を解析し、
+映像中に人物が登場したときの対応が必要となるアプリケーションで利用される。</p>
+<p>人物に特定しない移動物体の検出と追跡のアルゴリズムは数多く開発されており、 まずそれらを適用することが考えられる。
+さらにそれらに加えて、 例えば映像中の肌色領域を検出するなど人間に関係のある特徴量の抽出を適用することで、
+認識率を高める試みがなされている。</p>
+<p>現在このレベルの技術のいくつかは実用化フェーズに到達しつつある。 通常のセキュリティ装置だけでなく、
+店舗やイベント会場入り口での入場者の計測、 歩行者の交通量調査、
+商店内における買物客の滞在動向調査、などへの応用が考えられている。</p>
+<h4>レベル2: 人物の分別</h4>
+<p>上記の技術で映像中から人物の情報を切出すことができたとする。 次に要求される段階は個々の人物を分別して特定することだ。</p>
+<p>人物の特定はパターン認識の問題になる。 切出された人物の特徴、すなわち顔のデータ (場合によっては対象が指紋や掌紋、
+虹彩などであったりもするがこれらは本稿での取扱いの範囲外とする) の持つ特徴量をいかに上手に利用して認識を行なうかがポイントとなる。
+顔の特定に関しては <a href="http://www.neurosci.aist.go.jp/~kurita/lecture/statimage/node19.html" target="new">「固有顔」</a>と呼ばれる技術が利用されることが多い。</p>
+<p>このレベルの技術は、 人物を特定するセキュリティ装置としての顔認証による入退室管理や、 装置のロックと解除、
+映像から人物を抽出する装置などへの応用が研究されている。 技術の実用化もちらほら見えてきてはいるが、
+本格的な普及にはまだしばらく時間がかかりそうだ。</p>
+<h4>レベル3: 表情の理解</h4>
+<p>人物が認識できて、個人も特定できたとする。 その次に求められるレベルは、個人の状態の認識である。
+本コラムでも何回か取り上げたことのある視線入力は代表的なもののひとつ。 より複雑なものとしては、表情の理解がある。</p>
+<p>人間の顔画像から表情を特定する研究もいくつか行なわれており、 多くは顔を構成する目や鼻、口、
+眉などのパーツの位置関係や形状を認識することで表情を推察する方式を試みている。 もっとも <a href="http://www.geinin.jp/prof/takenakanaoto.html" target="new">笑いながら怒る人</a> などもいるので一筋縄ではいかない。 そのあたりの匙加減が難しいところである。</p>
+<p>表情を理解する技術の応用としては、 円滑なコミュニケーションを促進するエージェントの研究や、 ロボットへの適用が考えられている。
+あと10年もしたら表情を理解するロボットが登場するのではないだろうか。</p>
+<h4>認識技術の「使える」フィードバックを</h4>
+<p>このように表情の理解から感情の理解、人と機械とのコミュニケーション技術へと夢は広がるが、
+残念ながら現実の技術はまだそこまで達していない。 しかし<a href="http://www.zdnet.co.jp/news/bursts/0205/09/12.html" target="new">ドラえもんの実現を目標に研究開発が進められている</a>など、 この分野はいまとても熱い研究分野である。
+人間の感情を理解する最終ステージも意外と近いうちにクリアされるかもしれない。</p>
+<p>以上、人物認識に関して三段階の研究開発レベルを示した。 上記の三段階では表情の理解がもっとも難しい課題となっており、
+その応用分野としても楽しいものが想定されているが、 人物を抽出するだけでも使い方によっては有意義な技術である。
+技術開発においてはいたずらに夢を追いかけるだけでなく、 技術の実用化に向けて着実な研究開発を進めることも大切だ、
+という認識も忘れないでほしいところである。</p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>固有顔(Eigenface)
+<ul><li><a href="http://www.neurosci.aist.go.jp/~kurita/lecture/statimage/node19.html" target="new">固有顔による顔画像の認識</a></li>
+<li><a href="http://www.research.microsoft.com/users/mturk/" target="new">提唱者のひとり、Mattew Turk</a>(英語)</li>
+</ul></li>
+<li>以前に本コラムでも紹介した「Face IT」を利用した顔識別: <a href="http://www.identix.com/products/pro_faceit.html" target="new">Facial Surveillance</a>(英語)<br />
+なおFace ITを開発したVisionics社は、現在はIdentix社に買収されている。</li>
+<li>Take IT Easy の関連バックナンバー
+<ul><li><a href="20020409.html">「顔は情報の宝庫 〜顔指向インタフェース〜」</a>
+(2002年4月9日)</li>
+<li><a href="19991012.html">「ニヤリと笑うコンピュータ」</a> (1999年10月12日)</li>
+</ul></li>
+<li>バンダイでは<a href="http://www.zdnet.co.jp/news/bursts/0205/09/12.html" target="new">ドラえもん</a>の開発が進められているという。</li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20020702.html">2002-07-02 続けられる？インターネットでダイエット</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20020716.html">2002-07-16 自分で治す自律コンピューティング</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

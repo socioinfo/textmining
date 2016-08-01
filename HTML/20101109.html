@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>仮想化の行く末は? | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2010年11月9日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20101109.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-646"><a href="http://easy.mri.co.jp/20101109.html" rel="bookmark" title="仮想化の行く末は?">仮想化の行く末は?</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<p>コンピュータ資源の仮想化が大流行りである。</p>
+<p>世の中のサーバはクラウドコンピューティングに向かい、猫も杓子もクラウドの時代という様相を呈している。
+本コラムでも<a href="http://easy.mri.co.jp/20101005.html" target="_blank">「クラウド破産時代のホスティングサービス選び」</a>（2010.10.05）、<a href="http://easy.mri.co.jp/20100824.html" target="_blank">「クラウド時代のシミュレーション型BI」</a>（2010.08.24）、<a href="http://easy.mri.co.jp/20100803.html" target="_blank">「クラウド化予測」</a>（2010.08.03）、<a href="http://easy.mri.co.jp/20091027.html" target="_blank">「クラウド時代のOSとは」</a>（2009.10.27）というように、昨年あたりから立て続けに「クラウド」というキーワードがタイトルに入っている記事が登場するようになった。</p>
+<p>本コラム執筆者は必ずしも時代の最先端を行っているなどとおこがましい主張をするつもりもないが、以前、<a href="http://easy.mri.co.jp/20100309.html" target="_blank">「ゼロ年代の情報技術を「情報技術」で振り返る」</a>（2010.03.09）でも解説したように、ある程度のトレンドは掴めているはず。
+望むと望まざるとに関わらず、クラウド時代は既にやってきている。</p>
+<h4>クラウドを支える仮想化技術</h4>
+<p>クラウドコンピューティングに対する批判に、「クラウドコンピューティングはバズワード?」というものがある。
+確かにユーザからみると利用形態は単なるWebアプリケーションにしかみえず、「SaaSやASPとどこが違うの?」と疑問を抱くのももっともだろう。
+SaaSやASPにしても、そのありがたみはエンドユーザまではイマイチ浸透しておらず、バズワード扱いされていたというのに。</p>
+<p>クラウドコンピューティングの本質はサーバ実装の隠蔽によるスケーラビリティの確保にある。
+ユーザに提供するサービスが革新的になったわけではないところが、誤解を招く根本であろう。
+しかし、システム管理側にとってはたいへん有難い仕組みである。
+サービスを提供する計算リソースを、ユーザのニーズに合わせて柔軟に用意することができるからだ。
+1年を通じて定常的な需要が発生しているサービスは珍しく、アクセスが特定の時期に集中することはよくある話。
+そのときだけサーバを増強したり、あるいはアクセスが激減したときにサーバを縮退させたりといった調整が簡単にできる点が重要なのである。</p>
+<p>このように柔軟な運用を可能としている根本的な技術が、仮想化技術である。
+仮想化技術を用いた環境では、物理サーバの上でいくつもの仮想マシンが動作する。
+このようなことが可能になったのも、物理サーバの処理速度が十分に速くなったため、その上で複数の仮想マシンを動かしても全く問題にならなくなったからだ。</p>
+<h4>仮想化が目指す最適化とは</h4>
+<p>
+ユーザニーズの予測が難しい一般向けサービスだけでなく、組織内のITシステムをクラウドコンピューティング化することにも、メリットはある。
+これまで、組織内の様々な部署が要求するIT化を、都度、システム構築してきたという経験をお持ちの方も多いことだろう。
+その結果として、バラバラなハードウェアによる継ぎ接ぎのシステムが何となく稼働しているという悲惨な状況をよく聞く。</p>
+<p>クラウドコンピューティングにはこれらをまとめて受け入れる包容力がある。
+分散してしまった社内のITリソースを、まとめて管理することができればメンテナンス性も上がり、運用コストを下げることができるようになる。</p>
+<p>クラウド環境化では、どの物理サーバでどの仮想マシンが動いているのかを、通常は意識する必要がない。
+したがって、前述したように組織内でのITリソース利用ニーズの増減に対応した柔軟なシステム運用を実現できるだけでなく、管理の自由度が上がるという利点もある。
+例えば、特定の物理サーバについてメンテナンスが必要となったとき、そのサーバで稼働していた仮想マシンを代替機に移して運用すれば、サービスを停止することなくメンテナンス作業をすることができる。</p>
+<p>さらに、より高度なシステム運用のシナリオも考えられる。
+それは、システムの利用率に応じて物理サーバの電源を落とすことによって、環境に優しい運用をしようというものだ。
+仮想マシンを稼働中に移動させるライブマイグレーションという仕組みを上手に使えば、そのような運用も可能になる。
+閑散期には、あちこちで稼働している少ない仮想マシンを1ヵ所にまとめてしまい、節電しようという考えである。</p>
+<h4>仮想化に対するアンチテーゼ</h4>
+<p>
+ただし、先日、某大学で一般学生を相手にITに関する包括的な講義を行った際、「クラウドコンピューティングという言葉を知っているか」と尋ねてみたところ、まだその認知度は数パーセントに満たなかった。
+業界では盛り上がっているものの、一般への浸透はまだまだこれからというところのようだ。
+クラウドコンピューティングが普遍的な概念になるには、エンドユーザからの支持は不可欠だろう。
+本稿で紹介したシステム最適化の理想像もその一助となれば幸である。</p>
+<p>ところで、最後に<a href="http://k0a1a.net/rebuntu/" target="_blank">Rebuntu</a>という仮想化を皮肉った作品を紹介したい。</p>
+<p>
+Rebuntuは最近人気の高いUbuntuをベースに構築したLinuxディストリビューションの1つであり、Rebuntuの最新バージョンではUSBやCDからブートするブータブルOSとなっている。
+しかし、Rebuntuは「再生以外、何もしない」。</p>
+<p>Rebuntuが起動すると、自動的に仮想化環境が立ち上がるようにプログラムされている。
+そして、その仮想化環境を用い「Rebuntuそのもの」を起動するのだ。
+仮想マシンとして起動したRebuntuは、さらに仮想化によるRebuntuを起動する。
+このようにして、再起的にRebuntuが次から次へと起動されていく。
+もちろん物理的なメモリには限界があるので、資源を使い尽くしたところでRebuntuの処理は破綻する。
+Rebuntuのウェブサイトには動作の様子を示したスクリーンキャストが用意されているので、興味を持った方は閲覧してみるとよいだろう。</p>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>本コラムバックナンバーでタイトルに「クラウド」が含まれる記事
+<ul><li><a href="http://easy.mri.co.jp/20101005.html" target="_blank">「クラウド破産時代のホスティングサービス選び」</a>（2010.10.05）</li>
+<li><a href="http://easy.mri.co.jp/20100824.html" target="_blank">「クラウド時代のシミュレーション型BI」</a>（2010.08.24）</li>
+<li><a href="http://easy.mri.co.jp/20100803.html" target="_blank">「クラウド化予測」</a>（2010.08.03）</li>
+<li><a href="http://easy.mri.co.jp/20091027.html" target="_blank">「クラウド時代のOSとは」</a>（2009.10.27）</li>
+<li><a href="http://easy.mri.co.jp/20090908.html" target="_blank">「もうひとつのクラウド」</a>（2009.09.08）</li>
+</ul></li>
+<li><a href="http://k0a1a.net/rebuntu/" target="_blank">Re:buntu、自分自身を殺すLinux</a>&hellip;という触れ込みの作品（英語）</li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20101102.html">2010-11-02 進化する画像処理</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20101116.html">2010-11-16 サーバ仮想化の課題</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

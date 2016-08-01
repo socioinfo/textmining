@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>C言語プログラミングに関するスモールトーク | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2008年7月8日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20080708.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-534"><a href="http://easy.mri.co.jp/20080708.html" rel="bookmark" title="C言語プログラミングに関するスモールトーク">C言語プログラミングに関するスモールトーク</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>
+毎週お届けしている本コラムも今年の12月には10周年を迎える。筆者は連載当初から参加しているメンバのひとりであり、10周年かと思うとなかなか感慨深いものがある。この10年を振り返ってという話題はまた別の機会に譲るとして、筆者自身はずいぶんと変化した。そのひとつに「連載当初はバリバリとプログラミングをしていた一方で、最近は自らコードを書くことがめっきり少なくなった」ということが挙げられる。「これが35歳定年説の実体か?」とも思いつつ、それでも先日、とあるプログラムを書くためにコードの森を探検するチャンスが久しぶりにあった。今回はそのときに気がついた「ちょっとしたトピック」を紹介しよう。</p>
+<h4>C言語によるオブジェクト指向プログラミング</h4>
+<p>
+世の中に「オブジェクト指向プログラミング」という考え方がある。古くから提唱されている概念であり、近代的なプログラム言語はほとんどオブジェクト指向でデザインされているといっても過言ではない。オブジェクト指向の概念を乱暴に説明すると、扱うデータを「オブジェクト」と呼ぶ塊として捉え、さらにそのデータを操作するプログラム(これを「メソッド」と呼ぶ)も、そのオブジェクトの持ち物として扱おうというものだ。これによりデータとアルゴリズムが散逸することを防ぎ、プログラム開発の効率が高まったり、プログラムを維持する保守性が向上したりといったメリットが期待されている。</p>
+<p>
+ところで未だに様々なシーンで活用されており根強い支持を受けているプログラム言語にC言語がある(本コラムのバックナンバー<a href="20010220.html">「C言語はなぜ廃れないか」</a>も参照されたい)。C言語は歴史も古く、当然ながらオブジェクト指向言語ではない。しかしオブジェクト指向の考え方に基づくプログラミングスタイルはC言語でもそれなりに実現することができ、例えば<a href="http://www.sage-p.com/process/cool.htm" target="new">COOL (C-language&rsquo;s Object Oriented
+Language)</a>といったプログラミング手法も提唱されている。筆者もその昔<a href="http://www.malib.net/index_j.html" target="new">画像処理のC言語ライブラリ</a>を開発した際に、オブジェクト指向をベースとしてC言語ライブラリを設計した経験がある。C言語ながらオブジェクト指向を取り入れて美しくデザインされた<a href="http://www.gtk.org/" target="new">GTK+</a>というプログラムライブラリに感銘を受け、見様見真似で自らのライブラリを設計したものだ。</p>
+<p>
+オブジェクト指向プログラミング言語ではないC言語で、なぜわざわざオブジェクト指向をやろうとするのか。その答えはいくつかあるが、ここでは「オブジェクト指向の考え方は優れているが、それをプログラム言語でサポートしようとするとどうしてもプログラム言語の仕様が膨らんでしまう」という点を指摘しておきたい。<a href="20010220.html">「C言語はなぜ廃れないか」</a>でも指摘したように、C言語はハードウェアに近いシンプルなプログラミング言語である。一方で、オブジェクト指向プログラミング言語の多くはいわゆる高級言語として提供される場合が多い。それ故に、システムに近いところをプログラミングしたり、汎用性を確保したり、パフォーマンスを重視したりといったプログラミングではC言語が有利となる。このようなC言語の柔軟性とオブジェクト指向の開発効率を両立させようとしたとき、C言語でオブジェクト指向プログラミングをする意義が出てくる。</p>
+<h4>オブジェクトシステムの実現</h4>
+<p>先に紹介したGTK+から派生したライブラリで、<a href="http://ja.wikipedia.org/wiki/GObject" target="new">GObject</a>というシステムがある。このGObjectはまさに、C言語でオブジェクト指向プログラミングを実現しようとするための基礎的なコードを提供するものである。本ライブラリも版を重ね、かなり高度なオブジェクトシステムを構築することができるようになっている。</p>
+<p>
+ところが物事は一般的に、多機能になればなるほど複雑になる。そして複雑になればなるほど使い方が難しくなる。そこで高度に複雑化したGObjectには、オブジェクトを簡単に使えるようにするためのからくりがいくつか用意されている。そのひとつが<a href="http://www.jirka.org/gob.html" target="new">GObject Builder</a>と呼ばれる仕組みである。このGObject
+Builderを使えば、GObjectを設定するための複雑なC言語プログラム・ソースコードを書かずとも、簡略化されたGObject
+Builder用ソースコードを書くだけでGObjectを利用できるというのだ。</p>
+<p>GObject
+Builder用のソースコードは、C言語にオブジェクト指向のエッセンスを散りばめた独特のプログラムスタイルで記述される。同プロジェクトのウェブサイトに掲載されている説明によれば、その文法はJavaの影響を受けているとのこと。Javaの文法がその根本的な部分に関してC言語に影響を受けていることと対称的で面白い。</p>
+<h4>C++が通った道と同じ道</h4>
+<p>
+さてここまで読んで「cfront」という言葉を思い浮かべた方は、古くからC++プログラミングに親しんできたベテラン開発者か、もしくは特殊な環境でC++プログラミングをされている開発者の方に違いない。</p>
+<p>
+C++というプログラム言語がある。これはC言語にオブジェクト指向プログラミングの文法を組み込んだ、C言語のオブジェクト指向拡張ともいえるプログラム言語である(同様のアイデアでC言語を拡張したプログラム言語に、Objective-Cという言語もある)。このC++、現在でこそC++で書かれたプログラムのソースコードを、直接、オブジェクトコードに変換できるが、その昔は、いったんC言語のソースコードに変換してからC言語のコンパイラ経由でオブジェクトコードに変換していた。そのC言語ソースコードへのトランスレータがcfrontと呼ばれるツールだった。</p>
+<p>GObject Builderを利用したプログラミングは「GOBソースコード &rarr; Cソースコード &rarr;
+オブジェクトコード」という変換をたどる。これは「C++ソースコード &rarr; Cソースコード &rarr;
+オブジェクトコード」という昔のC++プログラミングを彷彿とさせる手続きだ。</p>
+<p>GObject
+Builderの立場は「あくまでC言語プログラムの一部として利用するためのツール」であり、新たな言語を開発したのではないという違いはある。GObject
+Builderの開発者はこのことを意識していたかどうか、とくにこの件に関する記述が関連文書の中には見つからなかったため、その答えは定かではない。しかしcfrontの出力したCプログラムを追いかけてデバッグしていた時代を懐かしく思い出したオジサンプログラマは、「歴史は繰り返すものだなあ」と感慨に耽った次第である。</p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>C言語によるオブジェクト指向の実現に関する説明：<a href="http://www.sage-p.com/process/cool.htm" target="new">COOL
+(C-language&rsquo;s Object Oriented Language)</a></li>
+<li>筆者らがはるか昔に開発した動画像処理のC言語ライブラリ<a href="http://www.malib.net/index_j.html" target="new">「MAlib」</a></li>
+<li>GNOMEやGIMPのベースを構成するウィジットライブラリ：<a href="http://www.gtk.org/" target="new">GTK+</a>(英語)</li>
+<li>Wikipediaによる<a href="http://ja.wikipedia.org/wiki/GObject" target="new">GObject</a>の説明</li>
+<li><a href="http://www.jirka.org/gob.html" target="new">GObject
+Builder</a>(GOB2)のウェブサイト(英語)</li>
+<li>Take IT Easyバックナンバー<a href="20010220.html">「C言語はなぜ廃れないか」</a></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20080701.html">2008-07-01 折るためのIT</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20080715.html">2008-07-15 漢字が思い出せない症候群</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

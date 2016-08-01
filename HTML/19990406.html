@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>機械が言葉を理解する日のために | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>1999年4月6日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F19990406.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-83"><a href="http://easy.mri.co.jp/19990406.html" rel="bookmark" title="機械が言葉を理解する日のために">機械が言葉を理解する日のために</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>ノートパソコンを会議に持っていき、 会議進行と同時に議事録を作成している光景を、 昨今しばしば目にするようになった。
+最近は私も、会議室にノートパソコンを持ち込むことがある。 会議が終わったあとで、なぐり書きのメモを見ながら議事録を作る、
+そんな今までの作業に比べ、確かにずいぶんと効率が上がったように思う。</p>
+<p>そもそも、議事録作りはけっこう面倒な作業である。 ここはひとつ全て機械にやってもらいたくなるのが人情というもの。
+会議が終わると自動的に議事録文書が出来上がっている、 なんてことが、はたして実現可能だろうか。
+今回は、議事録自動作成システムに必要な技術を検証してみよう。</p>
+<h4>基本機能 〜自然な音声認識〜</h4>
+<p>まず、言わずもがな、だが、 基本的な音声認識の精度が高くなくては話にならない。それも、
+マイクを意識させないごく自然なインタフェースで、との条件付きで。</p>
+<p>現在、NEC の<a href="http://www.psinfo.nec.co.jp/smart/spec01.htm">SmartVoice</a>
+や、IBMの<a href="http://www.ibm.co.jp/voiceland/">ViaVoice</a>、
+<a href="http://www2.toshiba.co.jp/pc/service/download/mimi/index_j.htm">東芝音声システム</a>
+といった音声認識関連ソフトウェアが商品として現れはじめた。 あるいはノキアの <a href="http://www.nokia.co.jp/products/yobeba/yb_top.htm">ヨベバ</a>
+やNECの<a href="http://www.nec.co.jp/japanese/product/mobile/japanese/useful/use06-2.html">ボイスサーチ</a>
+のように、音声呼び出し機能が携帯電話に内蔵されるなど、 音声認識はずいぶんと身近なものになってきている。
+ただしこれらは主に、接話型の音声入力を仮定していることが特徴だ。 電話の場合はそれでもあまり問題ない。しかし、
+一般の機器を想定した音声入力のインタフェースには、 非接話型マイクロホンを使うことが望ましい。</p>
+<p>接話型マイクロホンを利用する理由は、主に次の理由による。すなわち、 接話型だとマイクの周辺の音だけを拾うので、
+周囲の雑音の影響を受けにくいからだ。ということは、 雑音の少ない会議室は非接話型の音声入力技術を活かす、 うってつけの舞台といえよう。
+非接話型マイクを使いながら音声入力の精度を向上させる技術のひとつに、 複数個のマイクを並べて音源を特定する、 <a href="http://www.hil.ntt.co.jp/AcousticEnv/abma.html">マイクロホンアレー</a>と呼ばれる技術がある。</p>
+<h4>分散処理か集中処理か</h4>
+<p>では議事録作成システムの構想に戻ろう。 会議というからにはやはり複数人の発言を処理できなければいけない。
+ここで、各個人の発言を個別に文書化処理するのか、 あるいは集中して処理を行なうのか、ふたつの立場から考えてみたい。</p>
+<p>まず、個々の聞き分けはできている、 あるいは比較的指向性の高いマイクを使い個人ごとの音声入力が実現されているケース。
+個別に文書化処理を行なう場合、 それらの処理系を協調させる並列/分散処理環境が必要となる。 発言者ごとに割り当てられたコンピュータが
+並列に処理を行なう。それを議事録として文書を纏めるには、 当然、各処理システムの協調作業が重要だ。</p>
+<p>一方、<a href="http://www.intel.co.jp/jp/pentiumIII/xeon/home.htm">昨今のCPU</a>の圧倒的な計算パワーにものを言わせ、
+各発言者の音声を集中して処理することも考えられる。 この場合、発言者の聞き分けのための話者認識や、
+同時に複数の人間が喋ったときの話者分離技術が必要となる。 人間の聴力には、複数人の会話から自分に必要な情報を聞き分ける能力
+があるという(これを、 <a href="http://www.sv.cc.yamaguchi-u.ac.jp/~inui/inui/gengo/audi.html">カクテルパーティ効果</a>と呼ぶ)。
+この現象のメカニズムはまだ十分に解明されていないが、 雑踏の中での音声認識や、複数話者の音声認識などへの応用が期待されている。</p>
+<h4>人工知能の領域へ</h4>
+<p>さて、音声認識の処理システムはうまく組み上がり、 会議参加者の発声はすべてコンピュータに取り込まれるようになったとする。
+どんな会議であれ、発言を羅列しただけの記録はそのままでは読みづらい。 人間は、意外と不必要な言葉を発声しているもので、
+「えー」だの「あの」だの意味のない言葉を喋っているものだ。 と思えば主語を省略してみたり、極端な話、「そう、それ」
+だけで意思の疎通ができてしまうケースもある。</p>
+<p>一方、アウトプットである議事録は体裁よく整えられた文章である。 無意味な言葉の混じった発言記録から有用な情報を取り出し、
+意味のある議事録としてまとめあげるには、 <a href="http://www.microsoft.com/japan/office/documents/upgradenews/upg_2.htm">
+文章要約機能</a>が欠かせない。</p>
+<p>「あの」など不要なノイズを除去し、 必要ならば省略された言葉を補う。
+その上で構文解析と意味解析を行ない、重要な情報の取捨選択をする。 結論や申し送り事項など特記事項を分析し、
+最後に体裁を整えて議事録を出力。 話し言葉から書き言葉への変換も必要だ。 ここまでくると、もはや人工知能研究の範囲である。</p>
+<p>議事録の自動作成を題材に、必要となる情報技術を俯瞰してみた。 ごく単純な作業と思えることですら、
+様々な分野における最高の技術を上手に組合わせないと、 全体として正しく動作しない。 コンピュータが現在の生活に広く浸透し、
+高度な進化を遂げたように見える情報技術だが、研究開発の余地はまだ広い。</p>
+<p><!--
+ここで情報技術関連のメーカに注文がひとつ。
+小手先のテクニックで誤魔化すことなく、真摯な態度で技術開発をお願いしたい。
+--></p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>NEC の<a href="http://www.psinfo.nec.co.jp/smart/spec01.htm">SmartVoice</a>：認識用のヘッドセットマイクがパッケージに含まれている。</li>
+<li>ジャストシステムの <a href="http://www.justsystem.co.jp/product/applicat/vtaro/vtaro.html">Voice一太郎9</a>：音声認識エンジンに
+IBM の <a href="http://www.ibm.co.jp/voiceland/">ViaVoice</a>
+を利用している。</li>
+<li>東芝が提供している <a href="http://www2.toshiba.co.jp/pc/service/download/mimi/index_j.htm">東芝音声システム</a>。</li>
+<li>ノキアの <a href="http://www.nokia.co.jp/products/yobeba/yb_top.htm">ヨベバ</a>：
+ボタンを押して、登録しておいた名前を呼ぶだけ。</li>
+<li>NEC の <a href="http://www.nec.co.jp/japanese/product/mobile/japanese/useful/use06-2.html">
+ボイスサーチ</a>：ヨベバと同様の機能。この他にも各社が類似の機能を提供している。</li>
+<li>NTT による<a href="http://www.hil.ntt.co.jp/AcousticEnv/abma.html">マイクロホンアレー</a>の解説：まさしく会議での音声収録をイメージした説明だ。</li>
+<li>1999年3月現在、PC用で最も強力なプロセッサ <a href="http://www.intel.co.jp/jp/pentiumIII/xeon/home.htm">Pentium III
+Xeon</a></li>
+<li>オンライン実験 <a href="http://www.sv.cc.yamaguchi-u.ac.jp/~inui/inui/gengo/shoutoku.html">
+「聖徳太子に挑戦」</a> では、 <a href="http://www.sv.cc.yamaguchi-u.ac.jp/~inui/inui/gengo/audi.html">カクテルパーティ効果</a>を実際に経験することができる
+?</li>
+<li>MS Word 97 には、 <a href="http://www.microsoft.com/japan/office/documents/upgradenews/upg_2.htm">
+文章要約機能</a> が備えられている。</li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/19990330.html">1999-03-30 どうなるの？これからの図書館</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/19990413.html">1999-04-13 小型リムーバブルメディアの使い道</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

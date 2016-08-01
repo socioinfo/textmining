@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>物理シミュレーションへの誘い（後編） | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2009年9月2日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20090902.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-589"><a href="http://easy.mri.co.jp/20090902.html" rel="bookmark" title="物理シミュレーションへの誘い（後編）">物理シミュレーションへの誘い（後編）</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<p>本記事は<a href="20090825.html">「物理シミュレーションへの誘い（前編）」</a>の続編です。
+前編を未読の方は、ぜひそちらからご覧下さい。</p>
+<p>さて、物理シミュレーションは剛体に関するものだけではない。 液体や気体を対象とした物理演算の技術も同時に開発されてきた。</p>
+<h4>重力多体系の数値シミュレーション<br /></h4>
+<p>複雑な物理演算の課題として「多体問題」と呼ばれる問題設定が存在する。
+2つの物体が相互に作用する際の挙動を計算する課題が「二体問題」であり、3つ以上の物体が複雑に作用する状況を明らかにする問題が「多体問題」である。
+例えば月と地球の関係を計算するのであれば、それは二体問題だ。しかし太陽系の惑星と衛星、そして太陽の関係まで含めて計算しようとすると、それは多体問題として扱わなければならない。</p>
+<p>
+一般に二体問題は解析的に解けるが、多体問題は限定的な条件を定めない限りは解析的に解けないとされている。そのようなケースではまさに、近似的な手法によるシミュレーションが重要な役割を担う。</p>
+<p>
+多体問題を解くことで明らかになる問題設定は多く、重力多体問題専用のコンピュータも開発された。1989年に東京大学で開発されたGRAPE-1に始まる<a href="http://ja.wikipedia.org/wiki/" target="new">GRAPE（GRAvity piPE）シリーズ</a>は、その代表的なものである。</p>
+<h4>分子動力学<br /></h4>
+<p>
+ところで、GRAPEはもともと天体のシミュレーション、すなわち多数の恒星から構成される銀河、球状星団、銀河団の時間変化や動力学を解析するために開発されたコンピュータであった。しかし身近なところに多体問題解決のニーズは存在した。
+それが分子動力学である。</p>
+<p>
+分子動力学とは、分子レベルの力学演算を解くことにより物体の挙動を解明する動力学である。天体規模の多体問題をそのままスケールダウンすることで応用が効いたため、分子動力学へのコンピュータによる物理シミュレーション応用は、急激に進んだ（ただし物体間に働く力の種類や力の働き方は異なるので、全くそのまま規模を変えればよいというものではないことには注意しよう）。
+実際、GRAPEから派生した分子動力学向けの専用計算機<a href="http://mdgrape.gsc.riken.jp/" target="new">MDGRAPE（Moleculer Dynamics
+GRAPE）</a>も理化学研究所らによって開発され、活用が進められている。</p>
+<h4>バイオコンピューティングへの応用<br /></h4>
+<p>分子動力学の主要なターゲットはバイオコンピューティングの分野である。
+例えば、重要なアプリケーションの1つとして、シミュレーションを用いた「創薬」がある。</p>
+<p>
+新たに薬を開発する手順においては、動物実験や臨床試験を繰り返し、有効性や安全性を十分に確かめる必要がある。したがって新薬の開発には莫大な費用がかかり、そのため新薬開発は多分に投資的な性質を持つ。</p>
+<p>ここで分子動力学によるシミュレーションの出番である。
+新薬開発の初期段階において、たんぱく質の挙動をシミュレーションで調べることができれば、開発で試行錯誤する範囲を効果的に狭めることが可能になるだろう。
+ある病気が発症する原因となるたんぱく質の性質が分かっていれば、そこだけに反応する薬品を開発することで病気を抑えることができる。その初期段階で、たんぱく質の反応を物理シミュレーションで求める。このようなシミュレーションにより、有効な薬品候補のデザインにかかるコストを削減することが可能になるのである。</p>
+<h4>本文中のリンク・関連リンク：</h4>
+<ul><li>本コラムの前編：<a href="20090825.html" target="new">「物理シミュレーションへの誘い（前編）」</a></li>
+<li>Wikipediaによる<a href="http://ja.wikipedia.org/wiki/" target="new">GRAPE</a>の説明。</li>
+<li>MDGRAPEを開発した理科学研究所の<a href="http://mdgrape.gsc.riken.jp/" target="new">高速分子シミュレーション研究チームと生命体基盤ソフトウェア開発・高度化チーム</a>。</li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20090825.html">2009-08-25 物理シミュレーションへの誘い（前編）</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20090908.html">2009-09-08 もうひとつのクラウド</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

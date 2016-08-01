@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>CGMコンテンツの分析は集合痴に要注意 | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2011年2月1日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20110201.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-656"><a href="http://easy.mri.co.jp/20110201.html" rel="bookmark" title="CGMコンテンツの分析は集合痴に要注意">CGMコンテンツの分析は集合痴に要注意</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<p>集合知やCGM(Consumer Generated
+Media)は、ITの活用領域としてまだまだ発展する余地が大きい分野である。 今後も様々なサービスが開発されていくだろう。
+本コラムでも、これまで何度か集合知やCGMに関するテーマを取り上げている。
+集合知やCGMという話題、いまだホットな領域であり、目を離せない分野である。</p>
+<p>
+しかし一方で、集合知やCGMのプラットフォームたり得る掲示板やコメント欄、twitterなどのオンライン・コミュニケーションツールは、<a href="http://ja.wikipedia.org/wiki/%E7%82%8E%E4%B8%8A_%28%E3%83%8D%E3%83%83%E3%83%88%E7%94%A8%E8%AA%9E%29" target="_blank">炎上</a>したり、<a href="http://www.paradisearmy.com/doujin/pasok7s.htm" target="_blank">田代砲</a>のような悪戯が蔓延したりといった危険も孕んでいる。
+そのような状況はもはや「集合知」ではなく「集合痴」という名がふさわしい。
+集合知は新しい知識発見の方法として非常に魅力的だが、そこに集合痴が混じると道を誤るリスクがある。</p>
+<p>集合痴になってしまったケースか否かの見極めは、生のデータを人間が少しでも読めば、それほど難しくないだろう。
+しかし機械的な判断は、さほど簡単な話でもない。
+大量のCGMコンテンツをデータマイニングやテキストマイニングのツールで機械的に処理しようとする場合には、集合痴になってしまったケースを自動で排除する仕掛けを用意しておかなければ、誤った結論を導いてしまいかねない。
+そのためには、集合痴状態か否かを自動で判断する基準として使うための、何らかの指標を用意しておく必要があろう。</p>
+<h4>集合知から集合痴に至る道</h4>
+<p>具体的な例を示そう。 本稿では、書評の分析を題材にして、集合知と集合痴の区別を考えてみたい。</p>
+<p>本稿で以下に示すグラフは、大手オンライン書店サイトに寄せられたユーザレビュー、つまりユーザによる書評を分析したものである。
+およそ500件以上のレビューが寄せられている書籍をいくつかピックアップし、その傾向を調べてみた。
+以下に示すグラフの縦軸は各レビューの文字数、横軸は、そのコメントの有用度である。 なお縦軸は対数目盛りで刻まれている点に注意されたい。
+このグラフに、書評と共に示されている星の数による評価で分類した各レビューを、プロットした。</p>
+<p>なお有用度は「そのコメントが参考になったか否か」の投票で定められる。
+ユーザはレビューコメントを読んで、「参考になった」もしくは「参考にならなかった」との意見を投稿できる。
+そこで、「参考になった」という投票を投票の総数で割った値として、有用度を定義する。 有用度は0.0から1.0の値をとる。
+その値が高いほど、そのレビューの価値が高い、そのレビューに共感したユーザが多い、あるいは、そのレビューに対する支持者が多い、ということを意味する。
+有用度を、そのレビューに対する支持率と読み替えても構わないだろう。</p>
+<p>では6作品の分析結果を順にみていこう。 順番は、投稿されているレビュー数の少ないほうから並べている。</p>
+<h4>まともな集合知のケース</h4>
+<p>ケース1:
+最初に示すグラフは、いま非常に人気の高いミステリー作家の手による直木賞受賞作に寄せられたレビューの分布である。</p>
+<p><a href="images/case1.png"><img src="images/case1.png" width="450" alt="書評の分析、ケース1" title="case1" class="aligncenter size-full wp-image-3796"></a></p>
+<p>この作家の作品に対する書評は星5つと高い評価が多く、星4つ、星3つが徐々に減っていく逆三角形の分布をみせているという特徴を持つ。
+星2つや星1つという評価は少ない。
+映像化された作品も多く、高い人気を誇るベストセラー作家だけに、愛読者による真面目なレビューが多く投稿されていることの証であろう。</p>
+<p>それだけにレビューコメント自体にも真面目な評価が加えられている。
+グラフをみると、星の多寡に関わらず、コメントの評価が一様に分散している傾向が分かる。</p>
+<p>ケース2およびケース3: 次は、グラフを2つ示そう。
+1つは昨年ベストセラーとなったビジネス書ふうの小説、もう1つは昨年夏に映画が公開され、驚きのラストシーンが待っていたミステリ小説だ。</p>
+<p><a href="images/case2.png"><img src="images/case2.png" width="450" alt="書評の分析、ケース2" title="case2" class="aligncenter size-full wp-image-3797"></a></p>
+<p><a href="images/case3.png"><img src="images/case3.png" width="450" alt="書評の分析、ケース3" title="case3" class="aligncenter size-full wp-image-3798"></a></p>
+<p>両者に共通して、先のグラフよりは全般的に有用度が下がっている。
+また星の数が低いコメントのほうが支持されており、星の数が高いものは共感を得にくいという傾向があるのではないか、ということにも気付く。
+実際、これらのケースについて星5つのコメントと星1つのコメントに関する有用度の平均を検定すると、有意差があることが示される。</p>
+<p>この2作、いずれも内容とは違った文脈で話題が広がった作品であり、先の書評とはやや質が違っている。
+コアなファンによる書評以上にライトユーザによる書評が多く含まれると、全体としてはこのような傾向を見せるようである。</p>
+<h4>どうも集合痴となってしまったケース</h4>
+<p>ケース4: 次のグラフは、ある文学賞の大賞受賞者がイケメン俳優だったというレアなケース。
+完全に話題先行型で、この受賞作が出版されたときには、その内容に関してかなりの物議を醸した。</p>
+<p><a href="images/case4.png"><img src="images/case4.png" width="450" alt="書評の分析、ケース4" title="case4" class="aligncenter size-full wp-image-3799"></a></p>
+<p>これまでに示したグラフと極端に異なることは一目瞭然である。
+星1つや星2つといった低評価の支持率が極めて高く、逆に星4つ、星5つといった高評価は軒並み反感を買っている。
+全体の評価結果に対する単純平均も低いが、有用度で重みを付けて評価の平均をとると、悲惨な結果になってしまうだろう。</p>
+<p>ケース5: 次は、不思議なベストセラーのケース。</p>
+<p><a href="images/case5.png"><img src="images/case5.png" width="450" alt="書評の分析、ケース5" title="case5" class="aligncenter size-full wp-image-3800"></a></p>
+<p>この作品も、先のグラフと比較的近いパターンとなっている。
+本作は、初版は自費出版として製作され、その文章も日本語としていろいろ問題があるという欠陥を抱えていたにも関わらず、ベストセラーとなり映画化までされたという作品である。</p>
+<p>グラフ全体の傾向はケース4と似ているが、明らかに違う点は、星5つで有用度がわりと高いものが散見される点である。
+ところがこれらの星5つで有用度が比較的高いというレビューのほとんどが、書籍の内容に対するレビューではなく、レビューに関するメタレビュー、あるいは「本書はトイレットペーパーとして最適でした」というようなウケを狙ったレビューである。
+その点には、十分に注意する必要があるだろう。</p>
+<p>次のケース6では、それがさらにエスカレートしている。</p>
+<p>ケース6:
+本作は、1500を越えるレビューがありながら、その評価は星1つまたは星5つに集中しているという極端な作品である。</p>
+<p><a href="images/case6.png"><img src="images/case6.png" width="450" alt="書評の分析、ケース6" title="case6" class="aligncenter size-full wp-image-3801"></a></p>
+<p>1000以上の評価が星1つとはいえ、ケース4、ケース5と異なり、星5つの評価も多くのユーザによる支持を得ている特徴を持つ。
+しかしこの事実から、「内容がエキセントリックなので両極端に意見が割れているのかな」と安易に判断してはいけない。
+このグラフは、ケース5で指摘したようなメタレビューが集中した結果である。
+このケースでは、完全にネットワーカーの遊び場となってしまっており、いわゆる「<a href="http://homepage2.nifty.com/Daiou2/Tateyomi.htm" target="_blank">縦読み</a>」という悪ふざけが蔓延した状態になっている。</p>
+<h4>集合痴には気を付けよう</h4>
+<p>本稿は、集合痴状態を否定するものではない。
+原因もなく掲示板が炎上したり、本稿でいう集合痴の状態になったりということはあり得ず、集合痴状態になるからには何がしかの要因が存在する。
+これまでの事例を振り返っても、炎上するケースというのは本人にも何らかの責任がある場合が多い。</p>
+<p>本稿で指摘したいポイントは、CGMコンテンツを機械的に分析する際には気をつけましょうということである。
+集合痴状態なった書評を分析しても、その書籍が述べたい内容に関する有用な知見は得られないだろう（逆に、炎上した原因を含め、その書籍をとりまく文化的事例に対する分析はできるかもしれない）。
+CGMを頼る際には、集合知か集合痴かを見極める能力を鍛え、落とし穴に落ちないように気を付けたい。</p>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>本文で登場したネットスラングのおさらい：
+<ul><li><a href="http://ja.wikipedia.org/wiki/%E7%82%8E%E4%B8%8A_%28%E3%83%8D%E3%83%83%E3%83%88%E7%94%A8%E8%AA%9E%29" target="_blank">炎上</a>：ブログのコメント欄や掲示板が燃え上がること</li>
+<li><a href="http://www.paradisearmy.com/doujin/pasok7s.htm" target="_blank">田代砲</a>：TImes誌のPerson of the
+yearに端を発するこの現象も、はや10年</li>
+<li><a href="http://homepage2.nifty.com/Daiou2/Tateyomi.htm" target="_blank">縦読み</a>：既にこれはひとつの文化か</li>
+</ul></li>
+<li>オンライン書評にまつわる様々な話題：
+<ul><li><a href="http://tokyo.txt-nifty.com/fukublog/2004/02/post_129.html" target="_blank">自作自演ばれる</a></li>
+<li><a href="http://t-c-management.seesaa.net/article/119176462.html" target="_blank">集合愚の世界</a></li>
+<li><a href="http://blogs.itmedia.co.jp/kyoko/2010/05/post-24eb.html" target="_blank">人はなぜつまらなかった本の書評を書くのか</a></li>
+<li><a href="http://blogs.itmedia.co.jp/mm21/2009/12/post-36ae.html" target="_blank">書評が広告になる時代</a></li>
+<li><a href="http://www.nozomu.net/journal/000210.php" target="_blank">「ブログ炎上」の体験記</a></li>
+<li><a href="http://himadakadakara.blog80.fc2.com/blog-entry-61.html" target="_blank">書評が消されてしまった話</a></li>
+<li><a href="http://sem-labo.net/blog/2009/10/04/0181/" target="_blank">書評の正しい見分け方</a></li>
+</ul></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20110125.html">2011-01-25 変わり行く標準化に対応せよ</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20110208.html">2011-02-08 電気自動車が生み出す新たなサービス</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>ITシステムの集中化とそのリスク | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2008年4月15日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20080415.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-524"><a href="http://easy.mri.co.jp/20080415.html" rel="bookmark" title="ITシステムの集中化とそのリスク">ITシステムの集中化とそのリスク</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div><br /><p>「歴史は繰り返す。」──
+陳腐な言葉だが、現在の情報システムが向かう先を考えるとき、この言葉がまず思い浮かぶ。情報システムにおける近未来の姿が、メインフレームにダム端(文字列をやりとりするだけのターミナルのこと)がぶら下がっていた昔の姿に重なってみえるからだ。</p>
+<h4>集中システムから分散システム、そしてまた集中へ</h4>
+<p>その昔、<a href="http://www.sorekika.com/dame.jsp?idx=331" target="new">「ダウンサイジング」</a>という言葉が流行ったことがある。その言葉は、メインフレームなどの大型計算機を皆で共用していた利用形態を小型高性能化したコンピュータに置き換えて各自で使う形態に変えることによって、コストダウンと効率化を図るというトレンドを指していた。実際、その流れは留まるところを知らず、大型コンピュータは特殊用途のみを残してほとんど消え去る運命にあった。</p>
+<p>
+一方で台頭してきた小型コンピュータは、パソコンの進化や個人用OSの爆発的普及、インターネットを介した広域ネットワーク化などの要因により瞬く間に浸透した。その一部はさらに小型化して携帯電話が情報端末化するに至り、十数年前には想像もできなかった情報環境を構成するまでになっている。多くの人々にとってこれらの情報機器は既に生活に組み込まれており、「<a href="http://www.open-u.jp/miraigaku/" target="new">高度情報化社会</a>は既に実現した」といっても過言ではない。</p>
+<p>
+ところがここへきて面白い現象が起こっている。高度に分散化した情報システムが、再び集中化へ向かっているのである。その形態が高度化しているという違いがあるとはいえ、この現象、当時を偲ばせる回帰現象と捉えられなくもない。</p>
+<h4>システムの集中化を裏付ける3つの話題</h4>
+<p>まず、SaaS (Software as a Service)の流行がある。IDC Japanによれば、<a href="http://www.idcjapan.co.jp/Press/Current/20080305Apr.html" target="new">2012年の国内SaaS市場規模は738億円にのぼる</a>という。SaaSとは、ソフトウェアそのものではなくサービスを提供しようという考え方で、数年前にASP
+(Application Service Provider)と呼ばれていたサービス提供形態の進化系である(参考:Take IT
+Easy 2008/02/26号<a href="20080226.html">「SaaSが普及するには」</a>)。いずれにしても、アプリケーションソフトウェアはネットワークの向こうにあるサーバ上で動作し、ユーザはサービスをクライアントから利用するというコンセプトである。ダム端がリッチなクライアント端末に変化しただけで、その実装は明らかに集中システムだ。</p>
+<p>
+さらにこの流れを加速している要素がWebアプリケーションである。Webブラウザは既にHTMLで表されたコンテンツを単に「ブラウジング(閲覧)」するツールでは無く、集中システムのリッチクライアントとしてデファクト標準的な地位を担うことになった。それを裏付けるように多機能化が進み、<a href="http://www.atmarkit.co.jp/news/200804/04/js.html" target="new">次世代Webブラウザは高速化が勝負という話題</a>に至っている。</p>
+<p>
+そして極め付きはシンクライアント。シンクライアントの実現方式には様々なものがあり、全てのシンクライアントが昔ながらの集中システムであると断言することはできない。しかし、クライアントをできるだけ軽量化して様々な処理をサーバでこなしてしまおうというその発想は、集中システムの実装そのものである。</p>
+<h4>なぜシステムの集中化が起こるのか</h4>
+<p>この現象は、何故、生じたのか。</p>
+<p>
+まずシステム管理者側の論理で考えてみよう。管理者にとっては、システムを集中化することで管理が容易になるという大きなメリットがある。例えば、システムに不具合があったとしても、サーバ側で手直ししてしまえばよい。バージョンアップも同様だ。分散したシステムに、いちいち手を入れて回る必要がない。</p>
+<p>
+ユーザに勝手なことをさせないという利点もある。これはユーザに対する利便性の提供とのトレードオフになるものの、情報セキュリティ管理が重視されている昨今、軽視できないポイントである。</p>
+<p>
+またユーザ側にしても利点はある。ユーザが抱えていた一定の情報処理を外部に委託してしまうことによって、低コストでそのサービスを享受できるケースがある。SaaSが本格的に流行するとすれば、このメリットが広く認知され、かつ有効に機能した場合だろう。</p>
+<h4>システム集中化のリスク</h4>
+<p>かように、システムの(再)集中化バンザイといったところだが、ここではあえてそのリスクを明示しておきたい。</p>
+<p>
+現代の集中化システムにおける最大のリスクは、ネットワークというインフラに大きく依存している点である。これらのシステムはインターネットもしくはイントラネットといったネットワークの上に構築されている。昔の集中システムと異なり、利用しているネットワークの基盤が本質的には脆弱なものだという指摘だ。</p>
+<p>
+本来、インターネット(イントラネット)を支えるTCP/IP通信技術は緩やかな通信システムである。その上で、ネットワークに依存した集中システムを稼動させるということは、それだけでリスクを負っているともいえる。ネットワーク障害の可能性を常に考慮した運用にしなければならないからである。</p>
+<p>
+またネットワークに障害が発生しなかったとしても、ネットワークを介したサービスを享受する際には、サービスの可用性を常に考慮しなければならない。サーバにアクセスが集中すると、<a href="http://www.itmedia.co.jp/enterprise/articles/0804/05/news002.html" target="new">極端にパフォーマンスが悪くなる</a>場合がある。</p>
+<h4>分散するサービスのリスク</h4>
+<p>
+また、各種の集中化システムを個別に利用するということは、ユーザからみると逆にサービスの提供元を分散化させるという状況でもある。その際には、<a href="http://www.dodgson.org/omo/t/?date=20080226" target="new">分散化のリスク</a>も考えなければならない。分散化した先のサービスが確実に提供されるか。あるいはサービス提供者を完全に信頼できるのか。──
+考えなければならないリスクは山ほどある。</p>
+<p>
+このようなシステム環境の変化へ対応する際に留意すべき点を平たくいえば、それは「相手あってのモノダネ」ということ。これらのリスクを検討せずにシステムの集中化(サービスの分散化)を進めることは、システム管理者にとってもユーザにとっても百害あって一利なし。運用上の最も大きなリスクである。</p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li><a href="http://www.sorekika.com/dame.jsp?idx=331" target="new">「ダウンサイジング」</a>：「ネオダマ」という言葉もあった。ちなみに、ネオダマの「マ」、本当は「マルチベンダー」もしくは「マルチメディア」を指す</li>
+<li>2000年から2002年にかけて、<a href="http://www.open-u.jp/miraigaku/" target="new">高度情報化社会の未来学</a>に関する研究会が設置されていた。研究成果は<a href="http://www.nttpub.co.jp/vbook/list/detail/0092.html" target="new">「高度情報社会のガバナンス」</a>として書籍化されている</li>
+<li>IDC Japanのプレスリリース(2008年3月5日)。<a href="http://www.idcjapan.co.jp/Press/Current/20080305Apr.html" target="new">「国内SaaS市場2007年の実績と2012年の予測を発表」</a></li>
+<li><a href="20080415.html" target="new"></a></li>
+<li><a href="http://www.atmarkit.co.jp/news/200804/04/js.html" target="new">「SaaSに追い風、桁違いに速い次世代Webブラウザたち」</a>：ブラウザの処理速度だけが問題ではないが、ひとつのボトルネックではある</li>
+<li><a href="http://www.itmedia.co.jp/enterprise/articles/0804/05/news002.html" target="new">「ガソリンの価格比較サイトがダウン、ネットの弱点は変わらず」</a>：ITmedia、4月5日の記事。ガソリン国会のあおりを受け、通常の15倍にも相当するアクセスの集中でサーバがダウンしたそうな</li>
+<li><a href="http://www.dodgson.org/omo/t/?date=20080226" target="new">「分散プロジェクトの誤謬」</a>：&rdquo;分散コンピューティングの誤謬&rdquo;を引合いに出して、プロジェクトを分散化させる際のリスクを論じている。たいへん興味深い</li>
+<li>Take IT Easy の関連バックナンバー
+<ul><li><a href="20080226.html">SaaSが普及するには (2008.02.26)</a></li>
+<li><a href="20070925.html">なぜオフィスソフトは無償化するのか
+(2007.09.25)</a>：ソフトウェアビジネスにも回帰現象がみられるというお話</li>
+<li><a href="20060418.html">仮想パーティへようこそ
+(2006.04.18)</a>：集中化したサーバでは仮想化技術が不可欠である</li>
+</ul></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20080408.html">2008-04-08 位置情報サービスの今後</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20080422.html">2008-04-22 ユーザ参加型のパーソナライズドサービス</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>多言語情報処理のキラーアプリ | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2005年10月18日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20051018.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-402"><a href="http://easy.mri.co.jp/20051018.html" rel="bookmark" title="多言語情報処理のキラーアプリ">多言語情報処理のキラーアプリ</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>ソフトウェアの国際化が進んでいる。 海外のウェブサイトで、 ごく部分的に日本語が使われているページに出会ったことはないだろうか?
+コンテンツは外国語なのに、 メニューや見出しの部分だけ日本語になっているものである。</p>
+<p>その手のページは、 CMS (Contents Management System)を使って動的に作られたもののはずだ。
+最近のCMSは国際化されているものも多く、 その手のシステムはリクエストを出したブラウザのロケール情報 (国や言語を表わす情報)
+に合ったページを生成しようとする。 その結果、CMSの持つ雛型の部分だけが日本語化されるため、
+中途半端に翻訳されたコンテンツが送られて来る、ということになる。</p>
+<h4>l10n、i18n、m17n</h4>
+<p>ところで本稿に関連したキーワードをまずおさえておこう。 そのキーワードとは、「現地語化(各国語化)」、「国際化」、「多言語化」
+の3つである。</p>
+<p>まず現地語化もしくは各国語化(localization)である。
+先頭の「l」と最後の「n」の間に10文字あることから「l10n」と省略される。 各国語化は、
+例えば英語のソフトウェアを改良して日本語のメッセージを出すようにしたり、 日本語の文書を扱えるように改造したりすることを指す。
+海外のソフトウェアを日本語化して利用しはじめた初期のころには、 多言語あるいは他言語での利用を意識することは少なく、
+目先の改造としてこの戦略が多用される傾向にあった。</p>
+<p>次に国際化(internationalization)。
+「l10n」同様、「i」と「n」の間に18文字あるため「i18n」と略される。 国際化とは、アプリケーションを簡単に多言語化したり、
+手早く各国語化したりできるようにするための仕組みを整備することだ。 各国語のフォントを整備したり、
+様々な文字を入力するための入力システムを提供したり、 あるいはそれらのための基本ライブラリやツールの整備を意味している。</p>
+<p>そして多言語化(multilingualization)、これは「m17n」となる。
+多言語化とは、そのソフトウェアが「同時に」複数の言語を扱えることをいう。 また複数の言語を扱えるとは、
+文字や単語を表示したり入力できるというだけでなく、 各言語の文法に応じた禁則処理を実現したり、
+日付、通貨単位の表記方法なども柔軟に扱えることを指す。</p>
+<p>誤解を恐れずに簡単に説明すると、 l10nは場当たり的な日本語化、
+i10nは日本語化と中国語化を共通のフレームワークで実現する方法、
+そしてm17nは日本語・英語・中国語をひとつの画面に表示したり入力できるようにすること、 である。
+国際化に加えて、多言語化というチャレンジがこれまで長い時間をかけて進められてきているのだ。</p>
+<h4>加速するソフトウェアの国際化</h4>
+<p>ソフトウェアの国際化が進んだ要因は、 市場がグローバルになったからである。 ソフトウェアがインターネットで流通し、
+世界規模で情報化が進んだ現在では、 ひとつの地域だけを考えていればよい時代ではなくなった。</p>
+<p>各国が現地語でソフトウェアを利用したいというニーズは高く、 当初は各国で独自に現地語化していた。
+しかし重複する部分は国際化のフレームワークでまとめていこう、 という発想はソフトウェア工学的に自然なものである。
+現在では国際化に向けたソフトウェアの仕組みも整備が進んでおり、 はじめから国際化対応を考慮して開発されるソフトウェアも多い。</p>
+<div align="center"><a href="http://easy.mri.co.jp/20051018_01.html" onclick="window.open('20051018_01.html','popup','width=600,height=610,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">
+<img src="20051018_01_thumb.png" width="200" height="200" border="0"></a><br /><font size="-1" color="gray">多言語化されているソフトウェアの例
+(クリックで拡大)</font></div>
+<h4>多言語化は本当に必要か?</h4>
+<p>現地語化(各国語化)のニーズは切実なもので、 また国際化も自然な過程で導出されてきた技術である。
+多言語化も、技術的にはとても興味深いテーマである。 しかし多言語化は本当に必要なのだろうか。</p>
+<p>オフラインのメディアとしては、 身近なところに多言語化された情報処理を見つけることができる。 例えば電化製品の取扱説明書である。
+世界に輸出されて使用されるような商品の取扱説明書には、 同じ内容を様々な言語で説明している。
+こういった説明書を作るソフトウェアは多言語化されている必要があるだろう。</p>
+<p>残念ながら、多言語化ソフトウェアのニーズはまだそれほど一般的ではない。 しかし国際的な情報流通の速度は急激に加速しており、
+国際交流はこれからさらに活発になっていくことが推測される。
+そうなったとき、多言語化情報処理の技術が今後は重要になっていくだろう。</p>
+<p>筆者は、多言語情報処理のキラーアプリケーションは翻訳分野にあると考える。 翻訳機能を組み込んだ情報処理ツールが欲しい。
+各国語で記述できるワープロだけでなく、 国際会議を支援するグループウェアや各国語が行き交うコミュニケーションツールの必要性は、
+今後ますます増えるにちがいない。</p>
+<p>多言語を用いた情報処理の課題は、 そもそも多言語を同時に操れる能力を持つ人間が非常に少ないため、
+コンテンツやツールを多言語化してもひとりでは検証しにくいことにある。
+国際的なコミュニケーションを支援する多言語化アプリケーションの登場を期待したい。</p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>OSSの国際化フレームワーク 「<a href="http://www.gnu.org/software/gettext/" target="new">gettext</a>」(英語)</li>
+<li>国際化ソフトウェア開発支援ツール 「<a href="http://www.bsearchtech.com/product/wwnavi/" target="new">World
+Wide Navi</a>」： ソフトウェアのソースコードを解析し、 国際化するための作業を支援するソフトウェア開発ツール。</li>
+<li>多言語化ソフトウェアの技術開発を進めている 「<a href="http://www.m17n.org/" target="new">m17n.org: 多言語化機構</a>」</li>
+<li>2003年3月に日本政府が作成したアジア・ブロードバンド計画におけるプロジェクトのひとつ、 「 <a href="http://www.asia-bb.net/jp/project/002.html" target="new">多言語翻訳プラットフォームの実証実験</a>」</li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20051011.html">2005-10-11 全画像検索は実現するか</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20051025.html">2005-10-25 公衆無線LANサービス再び</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

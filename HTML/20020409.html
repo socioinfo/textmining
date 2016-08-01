@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>顔は情報の宝庫 〜顔指向インタフェース〜 | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2002年4月9日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20020409.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-231"><a href="http://easy.mri.co.jp/20020409.html" rel="bookmark" title="顔は情報の宝庫 〜顔指向インタフェース〜">顔は情報の宝庫 〜顔指向インタフェース〜</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>前回の私の記事で、 キーボードやマウスに続く第三の情報入力デバイスとして、 三次元ポインタの研究が盛んであることを紹介した
+(<a href="20020115.html">「雲を掴む話 〜3次元ユーザインタフェースの実現〜」</a> )。
+今回はやや視点を変えて、 別のアプローチによる新たな情報入力装置の実現可能性を考えてみたい。</p>
+<h4>キーボードとマウスの限界</h4>
+<p>パソコンの普及で日本人もキーボードを叩く機会が増えた。 しかしキーボードに馴染めず苦労されている方も多いのではなかろうか。
+とくに日本語(あるいは中国語や韓国語)の場合は、 かなり高精度になってきたとはいえ漢字変換の必要性が、
+話をややこしくしている問題もある。</p>
+<p>マウスの利用とGUIによる視覚的なインタフェースは、 「とっつきやすさ」の面ではかなり効果を上げているが、
+一方で「マウスの操作を行なうために、 キーボードからいちいち手を離さなければならないのが煩わしい」
+というへビーユーザの声も少なからず聞こえる。</p>
+<p>また机上で操作するコンピュータにはキーボードやマウスによる情報入力が適していても、
+組込みシステムのようにキーボードは適当でない場合もあるだろう。</p>
+<h4>顔情報の利用</h4>
+<p>キーボードやマウス、タッチパッド、トラックボールなどに共通する項目は、
+いずれも手で操作するデバイス、ということだ。人間は、音声や身振り、 顔の表情など様々なメディアを利用してコミュニケーションを行なう。
+これらのコミュニケーションに倣った新しい情報入力装置の研究開発は、 とても自然な発想である。</p>
+<p>やはり音声認識や、手書き文字認識など、 言語情報の入力手段としての新たなユーザインタフェースは古くから研究されている。
+しかし人間のコミュニケーションは言語に依らない部分も多い。 音声や文字の情報以外に、多くの情報を含むといえば、顔、すなわち表情だ。
+顔の向きや視線といった、顔の部品を認識してユーザインタフェースに応用する研究も、 現在盛んに行なわれるようになっている。</p>
+<h4>ユーザはどこを見ている?</h4>
+<p>NTTの研究所で、 視線を計測してポインティングデバイスに応用しようとの研究が古くから行なわれている。
+3月の6、7日に行なわれた <a href="http://hands.ei.tuat.ac.jp/Interaction2002/i2002_.html" target="new">インタラクション2002</a>というシンポジウムでは、 <a href="http://www.brl.ntt.co.jp/people/takehiko/index-j.html" target="new">視線インタラクション</a>研究の最新の成果がデモンストレーションされていた。
+そのシステムではまだ顔の位置を固定しなければならないとの制約があり、 この点は更なる改良が望まれるところ。
+とはいえユーザが特殊な眼鏡をかけなければならないということもなく、
+新しいユーザインタフェースとして非常に有望な技術といえるだろう。</p>
+<p>被験者の見ている方向を計測したいというニーズは多い。 自動車のドライバーが運転中にどこを見ているか(安全性の確認)、
+人間がものを認識するときはどのような箇所に着目するのか(認知心理学実験)、
+ページのどの箇所をどの順序で読んでいくのか(ユーザビリティの検証)、 など様々なアプリケーションが考えられる。</p>
+<h4>顔情報インタフェースの難しさ</h4>
+<p>視線インタフェースや、 コンピュータが表情を取り扱うことに関する話題は以前でも本コラムで取り上げられている (<a href="19991012.html">「ニヤリと笑うコンピュータ」</a> <a href="19990727.html">「指も言葉もいらない&minus;足踏みから脳波インタフェースまで&minus;」</a> )。
+いずれも2年以上前に執筆された記事だ。 そのころと比べてこの分野の技術はどれだけ進歩しただろうか?</p>
+<p>画像認識をベースとしたユーザインタフェースの難しさは、
+大量の画像情報を、実時間で処理、つまり可能な限り短時間で処理しなければならない、 という点にある。
+ここ数年、CPUの計算能力が各段に向上したことにより、 実時間画像処理の可能性は飛躍的に高まってきた。 また画像情報の入力デバイスも、
+従来のCCDカメラやCMOSセンサ自身の性能向上だけでなく、 <a href="http://ascii24.com/news/i/tech/article/1999/07/29/603680-000.html" target="new">人工網膜カメラ</a>、 <a href="http://easy.mri.co.jp/%20http:/www.toshiba.co.jp/mmlab/tech/h05.htm" target="new">モーションプロセッサ</a>、 <a href="http://www.sony.co.jp/SonyInfo/News/Press/200202/02-0207/" target="new">ビジョンセンサ</a>など様々なものが現れてきている。</p>
+<p>新しいセンサの融合と高性能CPUによる力業的な計算処理を組合せれば、 ユーザの表情を読み取ることも、
+いや顔色からその日の体調すら判断できるインタフェースも実現するかもしれない。 健康管理をしてくれる洗面台、などというのはどうだろうか。
+でも朝起きて髭を剃っているときに「お疲れですね、ダンナ」 と声をかけてくる洗面台というのも、ちょっと鬱陶しいかな?</p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li><a href="http://hands.ei.tuat.ac.jp/Interaction2002/i2002_.html" target="new">インタラクション2002</a>では、 ユーザインタフェースに関するユニークな研究が多く発表されていた。</li>
+<li>NTTの大野氏による、 <a href="http://www.brl.ntt.co.jp/people/takehiko/index-j.html" target="new">視線インタラクション</a>研究。</li>
+<li>最近注目を浴びている様々な画像センサのいろいろ。
+<ul><li><a href="http://ascii24.com/news/i/tech/article/1999/07/29/603680-000.html" target="new">人工網膜カメラ</a>(三菱電機)</li>
+<li><a href="http://easy.mri.co.jp/%20http:/www.toshiba.co.jp/mmlab/tech/h05.htm" target="new">モーションプロセッサ</a>(東芝)</li>
+<li><a href="http://www.sony.co.jp/SonyInfo/News/Press/200202/02-0207/" target="new">ビジョンセンサ</a>(ソニー)</li>
+</ul></li>
+<li>Take IT Easy の関連バックナンバー
+<ul><li><a href="20020115.html">「雲を掴む話 〜3次元ユーザインタフェースの実現〜」</a>
+(2002年1月15日)</li>
+<li><a href="19991012.html">「ニヤリと笑うコンピュータ」</a>(1999年10月12日)</li>
+<li><a href="19990727.html">「指も言葉もいらない&minus;足踏みから脳波インタフェースまで&minus;」</a>
+(1999年7月27日)</li>
+</ul></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20020402.html">2002-04-02 パソコンへの意識 日本と韓国の違い</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20020416.html">2002-04-16 ROBODEXに見る近未来ロボット事情</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

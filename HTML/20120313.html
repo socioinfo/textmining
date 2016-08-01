@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>HEAD指向リリースマネジメントのスピード感 | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2012年3月13日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20120313.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-1651"><a href="http://easy.mri.co.jp/20120313.html" rel="bookmark" title="HEAD指向リリースマネジメントのスピード感">HEAD指向リリースマネジメントのスピード感</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<p>
+2012年2月29日、スペインのバルセロナで開催された<a href="http://www.mobileworldcongress.com/index.html" target="_blank">MWC2012（Mobile World Congress 2012）</a>のイベントで「Windows 8 Consumer Preview」版のお披露目が行われた。このConsumer Previewという製品は、正式版の発売に先駆けて、一般消費者向けにプレビュー版として公開されたものだ。
+</p>
+<p>
+本稿ではWindows 8の是非を論じたい&#8230;のではない。10年以上も前、まだ本コラムも始まったばかりで試行錯誤をしていたころ、<a href="http://easy.mri.co.jp/19990126.html" target="_blank">「バージョン番号の謎」</a>と題した記事を私が書いた。その記事ではバージョン番号の付け方、すなわち外形的なバージョンの決め方について言及しているが、本稿ではバージョン自体の決め方、すなわちバージョニング戦略あるいはリリース戦略について考えてみたい。
+</p>
+<h4>アルファ版、ベータ版、RC版&#8230;</h4>
+<p>
+さて冒頭で紹介したConsumer Preview、その前の版は開発者向けのDeveloper Previewという名前で開発途中のスナップショットが公開されていた。通常のソフトウェアでは、アルファ版、ベータ版、リリース候補（Release Candidate、RCと略される）版というような名称を用いて、都度、スナップショットが公開される。Windows 8に関していえば、Developer Previewがアルファ版に、今回のConsumer Previewがベータ版に相当するとのこと。今回のConsumer Previewは、かなり製品に近づいたものと考えてよい。
+</p>
+<p>
+一般に、アルファ版のソフトウェアはまだ粗削りな製品であり、ときとしてバグが多すぎて常用には向かないこともある。ベータ版になれば一般消費者がいじってもまあ実用に耐えうるレベルとなる。そしてリリース候補版は製品として十分な品質が確保できたものとして扱われる。
+</p>
+<p>
+ところで、ソフトウェアのリリースに際して、なぜこのような細々としたバージョン管理、あるいは少しずつご機嫌伺いをするような「そっと出し」戦略がとられるのだろうか。それは「ソフトウェアはあまりにも複雑だから」だ。ソフトウェアは生き物のようなところがあり、「これで完成です！」と胸を張って宣言できるケースは稀といわざるを得ない。正式版がリリースされてもバグフィックスが適宜行われることは周知のとおり。セキュリティパッチやバグフィクスパッチといった修正データが頻繁に公開され、ユーザーの手を煩わしつつも、ソフトウェアは変化してゆく。
+</p>
+<p>
+しかし一方で「オトナの都合」というものもある。ソフトウェアの開発も経済活動の一環である以上、必ずどこかで、「正式版の公開です！」と宣言するタイミングが求められるはずである（必ずしも商用ソフトウェアだけでなく、OSSであってもそれは求められるはず）。いつまでも「いえ、まだ開発途中でして&#8230;」と引きずるわけにはいかないのだ。また適切なタイミングで「ナントカ版です！」とチラ見せしないと、世間様の関心を失いかねない。そこで、ある程度の形が整ったところで、「アルファ版です」「ベータ版です」とやるわけである。このような状況を加味して、ソフトウェアのリリース戦略は決められてゆく。
+</p>
+<h4>HEAD指向リリースマネジメント</h4>
+<p>
+ソフトウェア製品のバージョンアップに関しては、各世代について、アルファ版、ベータ版、RC版ないしはプレビュー版といった過程を繰り返していくやり方が主流であった。ところが、最近はこの方法をとらずに頻繁にバージョンアップを繰り返すことでなし崩し的に進化させていくやり方が幅をきかせ始めた。例えばFirefoxやChromeといった代表的なウェブブラウザは、短いリリースサイクルで頻繁なバージョンアップを繰り返している。
+</p>
+<p>
+もちろんこれらの頻繁なリリースであっても、ある程度のベータ版は公開されている。しかしFirefoxではベータ版の公開に止まり、何回ものステップを踏んで熟成させていくやり方はとらなくなった。頻繁な自動更新を行うことで、「ユーザには常に最新の利用体験を提供する」というポリシーを実現しているのである。
+</p>
+<p>
+この方式の究極は、常に開発最先端のバージョンを公開・提供してユーザに使ってもらうというリリース管理方法である。駿河台大学の八田講師はこれを「HEAD指向リリースマネジメント」と呼ぶ。HEADとは、コードのバージョン管理ツールにおいて「最新の」コードセットを指す用語である。
+</p>
+<p>
+短いリリースサイクルによるバージョンアップの提供や、HEAD指向リリースマネジメントの実現は、オンラインによる自動アップデートでユーザの手を煩わせず最新版に更新できる機能があってこそ、受け入れられた方法であろう。この方法のよいところはユーザにとっては最新機能を常に利用できることであり、また開発者にとっても、各バージョンに枝分かれしたコード管理を行わなくて済むというメリットがある。
+</p>
+<h4>ウェブアプリ時代にマッチした戦略と留意点</h4>
+<p>
+ここまで読んで、慧眼な読者諸兄は「HEAD指向リリースの究極は、ウェブアプリケーション全てに当てはまる」ことに気がつかれたのではなかろうか。そう、エンドユーザに対するデリバリの不要なウェブアプリケーションは、常に最新版をエンドユーザに提供するアプローチを実現しているのだ。いつも利用しているサービスに、ある日、アクセスしたら新しい機能が追加されていたという経験をお持ちの方も多いはず。これこそがHEAD指向のリリースに見られる最大の特徴に他ならない。
+</p>
+<p>
+このように、新しいモノ好きなギーク、もしくはイノベータ、アーリーアダプタと称される人々にとって、HEAD指向リリースは「わくわくする」方法だろう。しかし常に新しい機能を堪能できるということは、常に新しいバグに晒されるリスクもあるということには気をつけねばならない。さらに、大多数の保守的なユーザは常に新しい機能を欲しているわけではない、という点も注意が必要だ。
+</p>
+<p>
+また企業内での利用のように、特定の情報システムと組み合わせて使う際も気をつけねばならない。頻繁なバージョンアップがシステムとの不整合を招く可能性があるからである。対策としては、特別な契約によりバージョンを固定して利用するという後ろ向きな解決策と、できるだけ標準的なプロトコルや機能の利用に留めることで頻繁なアップデートにも耐えうるシステムを構築する方法があろう。しかし前者は安易な解決だがいずれ破綻するモデルである。企業内のシステム管理者の皆様には、ぜひともHEAD指向リリースの効果と意義を十分に理解し、そのスピード感を享受しつつ新しいソフトウェアを有意義に活用し得るような、健全なシステム構築の検討をお願いしたいところである。
+</p>
+
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul>
+ <li>週刊Take IT Easy 1999年1月26日号：<a href="http://easy.mri.co.jp/19990126.html" target="_blank">「バージョン番号の謎」</a></li>
+ <li><a href="http://www.mobileworldcongress.com/index.html" target="_blank">MWC2012</a>, Mobile World Congress 2012：最新のモバイル関連機器に関する発表会（英語）</li>
+</ul>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20120306.html">2012-03-06 ビジネスとITを結ぶBPMという手法</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20120327.html">2012-03-27 インターネットでつかまえて</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

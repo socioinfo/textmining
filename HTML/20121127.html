@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>レビュースコアの補正にみられる、ある傾向 | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2012年11月27日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20121127.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-2195"><a href="http://easy.mri.co.jp/20121127.html" rel="bookmark" title="レビュースコアの補正にみられる、ある傾向">レビュースコアの補正にみられる、ある傾向</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<p>
+「美しい人はより美しく、そうでない方はそれなりに&#8230;」
+このフレーズを憶えている人は本コラムの読者にどれだけいるだろうか。
+いまから30年ほど昔に流れていた、フィルムのTVコマーシャルでのやりとりである。
+このコマーシャル自体は本コラムの内容と全く関係ないが、テーマとして挙げた「ある傾向」をどう表現しようかと考えていたら、頭にピンと浮かんだのがこのフレーズ。
+なるほどコピーライターは昔からうまいことを考えるものだと、妙に納得した。
+</p>
+<p>
+このフレーズがどう関係するのか、それが気になる方はぜひともこのまま最後まで読み進めていただきたい。
+</p>
+<h4>レビュースコアの取扱い</h4>
+<p>
+さて、一般の消費者がネットに書き込むことによってコンテンツが作成されるメディア、いわゆるCGM（Consumer Generated Media）の代表例として「レビュー」がある。
+CGMについては本コラムでも以前から何度か取り上げており、レビューの危うさについては<a href="20110201.html">「CGMコンテンツの分析は集合痴に要注意」</a>という記事で私も指摘した。
+しかし、他人の評判は気になるものだし、一般的には、オンラインショッピングのサイトでそれなりに参考にされている有効なコンテンツといえよう。
+</p>
+<p>
+多くのレビューでは、「☆1つ」から「☆5つ」というように、対象の良し悪しをスコアで点数化し、数値として評価できるようになっている。
+このような指標は感覚的なものなので、本来は順序尺度として扱うべきだ。
+ただし多くのシステムでスコアには「各スコア間の距離は等間隔で評価されている」という暗黙の仮定が持ち込まれており、その点数は間隔尺度として扱われている。
+間隔尺度として扱うことで各レビューのスコアに関する平均値を計算でき、その値をレビュー対象の良し悪しを測る総合的な評価指標として提示できることになる。
+</p>
+<p>
+そうはいってもレビューそれ自身が主観的なものだし、ステルスマーケティング、いわゆる「ステマ」や、「やらせ問題」のように、恣意的なレビューが紛れ込む隙が残されている。
+そこで、<a href="20110201.html">以前の記事</a>で紹介したように、少しでもより客観的な評価とするためにレビューそのものに対する更なる評価を備えているシステムも多い。
+</p>
+<h4>レビューそのものの評価を加味した補正の計算</h4>
+<p>
+さてここで、レビューコメントの有用度を用いてレビューの平均値を補正するということを考えてみよう。
+レビューの有用度とは、<a href="20110201.html">前の記事</a>で紹介したように、そのレビューが「参考になった」かどうかの投票を用いて決められる0.0から1.0までの値である。
+有用度は、全投票数分の「参考になった」への投票数として定義される。
+</p>
+<p>
+この有用度を用いて、レビューの平均値を「より客観的になるように」補正することを考える。
+そのために、単なる平均の代わりに、有用度を重みに用いた加重平均を採用してみよう。
+</p>
+<p>
+この加重平均では、参考になったレビューのスコアは重要視され、あまり参考にならなかったレビューのスコアは軽視される。
+多くの一般消費者にとって、☆の評価、スコアを付けるだけならいざしらず、わざわざレビューのコメントを投稿する作業は、いささか敷居が高いと感じるひとは多いことだろう。
+しかし、レビューを読んで参考になったかどうかをクリックするだけであれば簡単だ。
+単純平均の代わりにこの加重平均を使うというアイデアによって、より広い消費者の意見を反映することができるといえないだろうか。
+</p>
+<h4>みんなの意見を反映すると…</h4>
+<p>
+このように加重平均を用いて補正してみたところ、面白い傾向が浮かんできた。
+以下に示す図は、某オンライン書店でのベストセラーを対象として、補正の効果がどのくらい現れているかをプロットしたものだ。
+なお対象とした書籍は、これまでのベストセラーとしてリストアップされていたものから100以上のレビューコメントが寄せられていた200冊強を選んだ。
+</p>
+<img src="http://park42.mri.co.jp/easy/wp-content/uploads/2012/11/diff.png" alt="補正値とレビュースコア平均値の相関" title="補正値とレビュースコア平均値の相関" align="center" class="size-full wp-image-2200" />
+<p>
+縦軸は、単純平均から加重平均を引いた差分の値、そして横軸はレビュースコアに関する加重平均の値である。
+簡単にいうと、縦軸に関して中央より上にプロットされたものは、「補正したらレビュースコアは全体としてより高くなった」ものであり、中央より下はその逆、
+つまり「補正によってレビュースコアはさらに悪くなった」ものだ。
+恣意的なレビューが混ざっていると、そのようなレビューは排斥されるのでレビューの評価は大きく変動する傾向にある。
+この補正の根底には、「みんなの意見はだいたい正しい」という集合知の考え方がある。
+</p>
+<h4>高い評価はより高く、それなりの評価はそれなりに</h4>
+<p>
+ところで、横軸がレビュースコアの平均値である点に注目してほしい。
+グラフの上で回帰直線を引いてみると、ちょうど「☆4つ」あたりのところで差分値の正負が逆転する。
+すなわち、このグラフから、ユーザによるレビューの補正が行われると、低い評価はより低く、高い評価はより高くなるという傾向も確認することができるだろう（※ 蛇足ながら、冒頭で引用したフレーズはこの結果に対応したものですよ！）。
+</p>
+<p>
+先に述べたように、加重平均による補正は、レビューの評価にサイレント・マジョリティの意見が反映されたものと考えられる。
+これは、より客観的に評価したと考えることもできるが、見方によっては「多くの一般消費者は付和雷同する」ととらえることができなくもなかろう。
+ここで新たに気になるのは、「これは日本人特有の気質によるものなのだろうか、それとも海外でも共通に現れる傾向なのだろうか」という疑問である。
+</p>
+<p>
+今回対象としたのは日本の書籍に対する日本語のレビューだが、海外でも同じシステムが存在する。
+海外のデータを使って調べたらどうなるか、誰か挑戦してみませんか？
+</p>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul>
+ <li>本コラムバックナンバーでCGMやソーシャルメディアについて述べている記事（抜粋）：
+多くの執筆者がそれぞれの視点で関心を寄せている。
+  <ul>
+    <li><a href="20110201.html">CGMコンテンツの分析は集合痴に要注意</a>（飯尾）</li>
+    <li><a href="20110412.html">ネットにおけるデマ拡散防止のための取り組み</a>（松本）</li>
+    <li><a href="20110823.html">ソーシャルで作って広まるコンテンツの行方</a>（清）</li>
+    <li><a href="20111011.html">見えてきたソーシャルコマースの可能性</a>（鵜戸口）</li>
+    <li><a href="20110719.html">実名じゃなくてもいいじゃない</a>（小関）</li>
+    <li><a href="20110322.html">震災とICT</a>（澤部）</li>
+  </ul></li>
+ <li>本コラムで述べた分析の詳細は下記論文で報告されています。
+コピーを希望される方は、右欄の「お問い合わせ」で示される窓口まで、ご連絡ください。
+  <ul>
+    <li>飯尾, &#8220;CGMレビュー評価の分布と炎上状態の関係,&#8221; 第11回情報科学技術フォーラム (FIT2012), 講演論文集第3分冊, pp. 55-58, 東京 小金井, (2012.9).</li>
+  </ul></li>
+</ul>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20121113.html">2012-11-13 情報システム部門こそシステム化しよう　<br>～　開発保守の業務プロセス改善のススメ　～</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20121211.html">2012-12-11 音声コミュニケーション再び</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

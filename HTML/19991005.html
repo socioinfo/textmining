@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>無敵のファイアウォール | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>1999年10月5日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F19991005.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-107"><a href="http://easy.mri.co.jp/19991005.html" rel="bookmark" title="無敵のファイアウォール">無敵のファイアウォール</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>先日、書店でハッキングマニュアルの類いの怪しげな本を見た。 インターネットから攻撃を受けないためには、
+大事なコンピュータをネットワークに繋がないのが一番。 でもインターネットの美味しいところは利用したい。
+そんなワガママをちょっとだけかなえる機械を作ってみたので紹介しよう。</p>
+<h4>プライベートなイントラネット</h4>
+<p>企業の内部に張り巡らされたコンピュータネットワーク。 そのネットワークに接続されたコンピュータには、
+業務の遂行に必要な大切なデータがある。ときには秘密情報も扱っているかもしれない。
+企業の内部では、お互いのデータをネットワークでやり取りしながら、 その情報システムが動いているわけだ。</p>
+<p>ところで、ネットワークに接続されたコンピュータに、
+データの破壊や盗用などを目的としてあらかじめ許された手続きを経ずにアクセスすることを、 <a href="http://www.miti.go.jp/press-j/past/c60806a2.html" target="new">不正アクセス</a>という。 プライベートなネットワークに外部から不正アクセスされてはたまらないので、
+ふつうはまず閉じたネットワークを構成する。 インターネットに対し、このネットワークのことをイントラネットという(※1)。</p>
+<h4>出入口には防火壁を</h4>
+<p>一方、自分のコンピュータがせっかくネットワークに接続されているのだから、 イントラネットから外部のサーバーにアクセスしたい、
+という要求はごく自然な発想といえる。 そのためには、インターネットに接続する出入口をイントラネットに設ける必要がある。
+その出入口でアクセスのコントロールを行なうシステムが 「<a href="http://www.firewall.com/" target="new">ファイアウォール</a>」である。</p>
+<p>ファイアウォールは、その名の通り防火壁の役割りを担う。 外から容赦なく攻撃してくる不正アクセスの猛火を全て撥ね除け、
+内側のイントラネットを平和に保つことが重要だ。</p>
+<h4>究極的ファイアウォールへの道</h4>
+<p>さて今回、とある PC をプライベートなネットワークとインターネットの両方に接続する必要が生じ、
+まずは市販のファイアウォールの導入を検討した。ところが、 <a href="http://www.cisco.com/japanese/warp/public/3/jp/product/product/IOS/fire12_ds.html" target="new">ファイアウォール機能を内蔵したルータ製品</a>というのは意外とお高いものなのである。
+確かにいろいろな機能を持ち様々な設定が可能なのだが、予算的にやや敷居が高い。</p>
+<p>次に考えたのが PC にネットワークカードを2枚差し、Linux など PC-UNIX
+を入れてファイアウォール用の設定で運用することだ。 これは使われなくなった古い PC
+の廃品利用もでき、なかなかよいアイデアではあったながら、 やはり安全性を懸念する筋を説得できず断念。
+結局、物理的にネットワークを切り替えることによりイントラネットとインターネットを切り離して利用する、
+そのための機器を自作することになった。
+このようないきさつで製作した機械が今回紹介するネットワーク切替器、「ねっと切り替え君」である。</p>
+<h4>ネットワーク切替器「ねっと切り替え君」</h4>
+<p>なんといってもこの「ねっと切り替え君」の最大の売りは、 各ネットワークへの配線が物理的に切り離されている、
+ということだ。どんな手練れのクラッカーでも、線が繋がっていないことには手も足も出まい(※2)。</p>
+<center><img src="netSwitch.png"><br />
+ネットワーク切替器</center>
+<p>上図で、赤い部分が本体である。 PC からはパラレルポート経由でコントロールすることができ、
+ネットワークの接続先を切替えることが可能である。 ふだんはイントラネットに接続されている PC だが、
+必要なときだけ接続先を切替えてインターネットを利用することができる、というわけだ。</p>
+<center><img src="is_inner.jpg"><br />
+ネットワーク切替器の内部回路(※3)。</center>
+<center><img src="is_connect.jpg"><br />
+コードを全て接続したところ</center>
+<p>この機械は実際に某サイトで運用されているものなので、ここでの紹介は残念ながらこれまで。 興味のある方は<a href="mailto:easy2005@mri.co.jp">easy2005@mri.co.jp</a> | 電話:
+03-3277-4515 (広報部)をいただければ、 詳しい技術的情報を紹介します。</p>
+<p><font size="-1" color="gray">※1 より正確には、インターネット技術を用いた LAN
+のことである。また、 ここでは内部の人間によるネットワーク犯罪は考えない。内部に閉じたネットワークだけでなく、
+データを暗号化して外部をうまく利用しながら、 インターネット上に仮想的なプライベートネットワークを構築する例もあるが、
+本記事では割愛する。</font></p>
+<p><font size="-1" color="gray">※2 外部からイントラネットへのアタックはほぼ防御可能であるが、
+いわゆる「トロイの木馬」型ウィルスの侵入を防ぐことはできない。</font></p>
+<p><font size="-1" color="gray">※3 B、M、C とあるのがイーサネット用の RJ-45
+コネクタ。それぞれ、 ボード上に搭載されたリレーのブレーク(B)接点、メーク(M)接点、コモン(C)接点に接続されている。
+順に、イントラネット、インターネット、共通 PC にそれぞれ接続される。 各接点の名称などリレー用語の解説は <a href="http://www.ic.nec.co.jp/compo/em/reference.html" target="new">NEC
+のサイト</a>を参照のこと。</font></p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>不正アクセス関係で押さえておきたいサイト
+<ul><li>通産省報道発表資料： <a href="http://www.miti.go.jp/press-j/past/c60806a2.html" target="new">コンピュータ不正アクセス対策基準について</a></li>
+<li>不正アクセスが発覚したときには <a href="http://www.jpcert.or.jp/" target="new">コンピュータ緊急対応センター</a>へ連絡を</li>
+</ul></li>
+<li>ファイアウォール関連
+<ul><li>ファイアウォール関連のリンクをまとめた <a href="http://www.firewall.com/" target="new">&ldquo;firewall.com&rdquo;</a>(英文)</li>
+<li>「ファイアウォール」をキーにしてインフォシークで検索すると、 <a href="http://www.infoseek.co.jp/Titles?qt=%A5%D5%A5%A1%A5%A4%A5%A2%A5%A6%A5%A9%A1%BC%A5%EB&amp;lk=noframes&amp;svx=10&amp;col=JW&amp;qp=0&amp;nh=10" target="new">1万件以上</a>も情報がある。</li>
+<li>ルータの老舗、日本シスコの <a href="http://www.cisco.com/japanese/warp/public/3/jp/product/product/IOS/fire12_ds.html" target="new">ファイアウォール機能セット</a></li>
+<li>ワークステーションを利用したファイアウォール製品の例： <a href="http://www.sun.co.jp/security/FW-1/" target="new">サン・マイクロシステムズの
+Solstice(TM) FireWall-1(TM)</a></li>
+</ul></li>
+<li>「ねっと切り替え君」はパラレルポート出力でリレーを動作させて切替えている。 リレーに関する補足資料はここへ： <a href="http://www.ic.nec.co.jp/compo/em/reference.html" target="new">リレー用語を解説しているページ</a></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/19990928.html">1999-09-28 インターネットとY2K</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/19991012.html">1999-10-12 ニヤリと笑うコンピュータ</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

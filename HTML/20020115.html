@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>雲を掴む話 〜3次元ユーザインタフェースの実現〜 | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2002年1月15日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20020115.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-219"><a href="http://easy.mri.co.jp/20020115.html" rel="bookmark" title="雲を掴む話 〜3次元ユーザインタフェースの実現〜">雲を掴む話 〜3次元ユーザインタフェースの実現〜</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<div>
+<p>コンピュータの入力装置といえば、現在の定番はキーボードとマウス。 もちろん新たなユーザインタフェースとして、
+手書き文字入力装置や音声入力装置の研究開発が盛んに行なわれている。 しかし第三の、
+あるいはキーボードやマウスに代わる情報入力装置として決め手となるものは、 いまのところ現れていない。</p>
+<h4>ポインティングデバイスへの要求</h4>
+<p>ところで、 マウスは平面上の位置を決めるための装置(ポインティングデバイス)である。
+マウスパッドで上下左右にマウスを転がすことで、 マウスカーソル(マウスポインタ)を画面上の好きな場所へ持っていくことができる。
+マウスを使えば平面上の位置を自在に入力することができるわけだ。 ところが逆に平面に縛られているため、
+三次元空間上の一点を示すための操作をマウスで行なおうとすると、 実はこれがなかなか難しい。</p>
+<p>例えば三次元CADシステムなどで用いられる三次元モデリングソフトウェアでは、 立体的なモデルが画面上に表示される。
+そして一般的にそれらのソフトウェアでは、 そのモデルの姿勢あるいは視点の位置をマウスでコントロールすることができる。
+マウスを移動させるとディスプレイに表示された三次元モデルの向きが変わるのだが、
+この操作、なかなか希望通りの位置に動かすことができないことが多く、 実にもどかしい。</p>
+<p>この難しさの原因は、 平面的な移動の組合せで立体的な空間情報を入力させられている、 ということにある。
+視点の位置を空間的に直接入力できる装置があれば、 直感的に入力することができ、ユーザの負担も減るだろう。</p>
+<h4>三次元ポインタのいろいろ</h4>
+<p>三次元の情報を直感的に入力したい &hellip; この要求への回答は、先に挙げた三次元CADなどのデザイン分野だけでなく、
+バーチャルリアリティ(VR, Virtual Reality)の分野でも中心的なトピックとして研究が進められてきた。
+既にいくつかの三次元情報入力装置が開発されており、 数年前から実用フェーズに入っているものもある。</p>
+<p>まずは <a href="http://www.labtec.com/noflash/gear/3d_spaceball.cfm" target="new">SpaceBall</a>や <a href="http://www.3dconnexion.com/products/Classic.htm" target="new">SpaceMouse</a>に代表される卓上型三次元ポインティングデバイスがある。
+これらの製品はマウスやジョイスティックなど、 既存のポインティングデバイスの拡張型といえる。 基本的なアイデアは、
+センサの回転軸を増やすことで三次元情報を制御しようという発想だ。</p>
+<p>またもう少し直感的な操作を可能とする装置に、 アームの組合せで三次元位置を決定する入力装置がある (製品の例。 <a href="http://www.sensable.com/haptics/products/phantom.html" target="new">PHANTOM</a> &hellip; <a href="http://www.sensable.com/haptics/products/images/6dof.jpg" target="new">写真</a>)。 こちらはアームを実際の空間内で移動させることで、 ダイレクトに三次元位置を入力しようというものである。
+またこのデバイスは三次元位置の収集に加え、 ユーザに触感をフィードバックするという特長を持つ。</p>
+<p>ポインティングデバイスという位置づけからは若干それるが、 三次元情報の入力装置として有名なものにデータグローブがある。
+データグローブを利用すると、 グローブをはめた指先の動きの情報を、 空間上の位置情報としてリアルタイムに収集することができる。</p>
+<h4>おてがる三次元情報入力装置</h4>
+<p>先に紹介した様々なデバイスには、 各々一長一短の特徴がある。 三次元ポインティングデバイスは手軽に利用できる装置ではあるが、
+装置自体が移動しないので慣れるまでちょっとしたコツが要る。 アームの操作による三次元入力デバイスは直感的に操作できる反面、
+アームの移動範囲が限られているために入力できる位置に制限がある。
+またいずれも特殊なデバイスを必要とするためコストが割高になる傾向にある。</p>
+<p>手軽に三次元情報を入力する方法のひとつに、 2台以上のカメラを利用してステレオ視による空間位置情報を取得する方法があり、
+<a href="http://limu.is.kyushu-u.ac.jp/tokutei/tokutei.html" target="new">この原理をユーザインタフェースに利用しようという研究</a> が九州大学で行なわれている。</p>
+<p>また現在この研究を元にして、 <a href="http://www.malib.net/index_j.html" target="new">動画像処理</a>に基づいてユーザの姿勢情報を取得するための <a href="http://www.itc.co.jp/Fig-2.pdf" target="new">ソフトウェアライブラリを構築するプロジェクト</a>が実施されている。
+このライブラリを利用すると、ユーザの姿勢情報を任意に取得できるようになる。
+カメラの正確なキャリブレーションが必要という課題がまだ残されてはいるものの、
+入力装置にはUSBカメラなど数千円で入手できるカメラ数台を用意するだけでよい (2台以上用意すればよい)。</p>
+<p>このプロジェクト、今年の春には成果が公開される予定である。
+その成果はオープンソースソフトウェアとして提供される計画になっている。 画面上のアバターがユーザの姿勢に従って動くアプリケーションが、
+本ライブラリのサンプルとして用意されている。 その仮想空間ではCGで描かれたオブジェクトを思い通りに掴むことだって、
+簡単にできるようになるだろう。</p>
+</div>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li><a href="http://www.nissho-ele.co.jp/3d/" target="new">日商エレクトロニクス</a>では様々な三次元情報入力装置を扱っている。</li>
+<li>卓上型三次元ポインタ
+<ul><li><a href="http://www.labtec.com/noflash/gear/3d_spaceball.cfm" target="new">SpaceBall</a>(英語)</li>
+<li><a href="http://www.3dconnexion.com/products/Classic.htm" target="new">SpaceMouse</a>(英語)</li>
+</ul></li>
+<li>アーム型三次元ポインタ
+<ul><li><a href="http://www.sensable.com/haptics/products/phantom.html" target="new">PHANTOM</a>(英語)</li>
+<li>その概要 (<a href="http://www.sensable.com/haptics/products/images/6dof.jpg" target="new">写真</a>)</li>
+</ul></li>
+<li>これらのデバイスについては、 過去の本コーナーでも何度か取り上げられている。
+<ul><li><a href="19990608.html">「仕草で語り合う非言語インタフェース」</a> (データグローブ)</li>
+<li><a href="20020115.html">「十字キーは21世紀の世界標準になるか」</a>
+(三次元ポインティングデバイス)</li>
+</ul></li>
+<li>九州大学谷口研究室で行なわれている <a href="http://limu.is.kyushu-u.ac.jp/tokutei/tokutei.html" target="new">三次元ユーザインタフェースの研究</a></li>
+<li>情報技術コンソーシアムで実施されている <a href="http://www.itc.co.jp/Fig-2.pdf" target="new">三次元UI用ライブラリ構築プロジェクト</a></li>
+<li>上記プロジェクトのベースとなっている動画像処理ライブラリ： <a href="http://www.malib.net/index_j.html" target="new">MAlib</a></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20020108.html">2002-01-08 指紋認証で解決することしないこと</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20020122.html">2002-01-22 そろそろ使えるインターネット電話</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

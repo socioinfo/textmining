@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>NCDで何でもクラスタリング | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2010年8月17日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20100817.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-634"><a href="http://easy.mri.co.jp/20100817.html" rel="bookmark" title="NCDで何でもクラスタリング">NCDで何でもクラスタリング</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<p>正規化圧縮距離という概念がある。英語では Normalized Compression Distance、略してNCDという。
+この概念は情報の距離を測るメジャーとして使うことができる。 では情報の距離とは何か。それはデータの類似度で測る距離である。
+データXとデータYという2つのデータがあったとき、XとYの類似度を考えてみよう。
+類似度すなわち「似ている度合い」を距離に見立て、XとYが似ていれば「近い」、そしてXとYがかけ離れたデータであって全く似ていなければ「遠い」というわけだ。</p>
+<p>NCDでは、データの類似度を計算するために、そのデータが持つ情報量を使う。
+NCDの凄いところは、基本的にデータの情報量のみに依存しているので「その対象は何でも構わない」という点にある。
+すなわち、テキスト文書だろうが、画像や音楽のデータだろうが、はたまたDNAシーケンスだろうが、システムログだろうが、データの種類を問わず何でも距離を測ることができる。
+大量データの解析や分類、データマイニングを行う際に、分析のカギとなる特徴量をどうやって定めるかは悩ましい問題だが、NCDを使えば、特徴量の定義に関してアレコレと試行錯誤を重ねる必要はない。
+いかなるデータに対しても使える汎用のツール、なんとも頼もしい道具である。</p>
+<h4>NCDの原理</h4>
+<p>NCDの考え方を説明するために、冒頭で述べた2つのデータXとYに、もう一度、登場を願おう。
+XとYに関するNCDの計算では、情報の圧縮率に関する性質が巧みに使われている。
+すなわち「Xの圧縮率」に比べて「Yを知っているときのXの圧縮率」はとても小さくなるということを利用して、類似度から距離の値を導き出しているのである。</p>
+<p>
+全てのビットが同じ、つまり&#8221;11111&hellip;.1&#8243;というように極端なケースを除けば、一般的にはデータが何であれ、それ単独でデータ圧縮をかけたときに圧縮後のファイルサイズがほぼ0に近くなることはあり得ない。
+しかし、どんな大きなファイルサイズのデータXであっても、もしXとYが同じデータであってYが既知であるならば、「Yと同じ」という4文字までデータXを圧縮することができる。
+あるいはYをコピーすればXを複製できるのであるから、Xは消してしまってもよい。0バイトまで圧縮可能ともいえよう。
+一方、XとYが何ら関係のないデータであれば、Yを知っていたからといってXの圧縮率が下がることはない。</p>
+<p>また、2つのデータに共通のクセがあれば、情報圧縮の原理から、それらはまとめて圧縮後のデータにコーディングされることになる。
+したがってXとYに何らかの共通性があれば、それぞれを単独に圧縮したときと比べて圧縮率の向上を見込むことができるだろう。</p>
+<p>
+このような情報圧縮の性質を利用し、「それぞれの圧縮率」や「一方を知っているときの他方の圧縮率」によって定義される距離として、NCDの値が計算される。
+なお、実際にはデータの長さに依存しないように正規化処理が加えられるため、NCDの値は0.0(データが同じとき)から1.0(データがかけ離れているとき。ただし圧縮過程の誤差から1.0をわずかに越えることもある)までの値をとる。</p>
+<h4>クラスタリングしてみよう</h4>
+<p>さて、NCDはどれだけ使えるものだろうか。 NCDを用いた情報の整理手法として、クラスタリングを考えてみる。
+ここでは、具体的にNCDで階層的クラスタリングを行ってみた例を2つ紹介しよう。
+階層的クラスタリングとは、距離が近いものを見つけてはクラスタ化するという作業を全体で1つのクラスタとなるまで順次進めていくことで、データ全体を分類する手法だ。</p>
+<p>次の図(クリックで拡大)は、テキストデータを対象としてNCDによる階層的クラスタリングを適用した結果を示している。
+分析対象のテキストには、ここ1年以内に執筆された記事から15本を選んだ。
+具体的には、本コラムの執筆陣から5名を無作為に選び、それぞれ直近の記事を3本ずつ抽出、合計15本の記事を選ぶという手順を経て分析対象のデータを用意した。</p>
+<p>
+抽出したテキストデータから著者名を削除、タイトルと本文のみを切り出してから、NCDによるクラスタリングを適用した結果が次の図である。</p>
+<p><a href="images/figure_text.png" target="new"><img src="images/figure_text.png" width="450" alt="テキストのクラスタリング結果" title="figure_text" class="aligncenter size-full wp-image-3259"></a></p>
+<p>グラフの葉ノード(末端の楕円)は、著者ごとに色分けされている。
+それぞれの記事が著者ごとに分類されている傾向を見て取ることができるだろう。
+テーマ選びだけでなく、文体のクセまでも、思った以上に著者ごとの偏りがあるということか。</p>
+<p>
+また次の図(こちらもクリックで拡大)は、筆者が台北を訪問したときに撮影したスナップショットの画像データを、同じようにNCDを用いて分類してみたものである。
+台北101の展望台から撮影した夜景は隅にまとめられていたり(左上)、似たような構図の写真や新幹線の写真が近いところに置かれていたり(右端)、人間が目視で並べ替えた結果に近い分類結果が得られている点に着目されたい。</p>
+<p><a href="images/figure_taipei.png" target="new"><img src="images/figure_taipei.png" width="450" alt="画像のクラスタリング結果" title="figure_taipei" class="aligncenter size-full wp-image-3263"></a></p>
+<h4>期待されるアプリケーション</h4>
+<p>2つの例を見て、「NCD、それなりに使えそうでは?」という感じは掴めたのではないだろうか。 あとはこれを何に活用するか。
+いずれも研究レベルではあるが、<a href="http://www.sofken.com/FIT2009/pdf/F/RF_002.pdf" target="_blank">製品・サービスの価値評価</a>や、<a href="https://kaigi.org/jsai/webprogram/2010/pdf/286.pdf" target="_blank">英作文のピアレビュー効果測定</a>などに応用した例が報告されている。</p>
+<p>
+大量の画像データから類似画像を検出したり、ビデオデータから特定のシーンを検出したりといった「類似した○○を検出する」マイニング技術にも応用が効くだろう。
+直近で思いつく具体的なアプリケーションとしては、著作物の権利侵害を検出するツールへの応用が考えられる。
+パラグラフの順番を入れ替えたり、若干の編集を加えたりした程度の文章であれば、元文書との距離は極端に近くなる。
+それを利用すれば、コピペや盗用を検知することも簡単にできる。</p>
+<p>NCDは数年前に提唱された技術ながら、日本ではまださほど普及が進んでいない。
+しかし、なにしろ対象とするデータは何でもよいのだから、アプリケーションの範囲は幅広く、大きな可能性を秘めている技術である。</p>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>藤原らによる<a href="http://www.sofken.com/FIT2009/pdf/F/RF_002.pdf" target="_blank">「コルモゴロフ複雑性に基づく製品・サービスの価値評価」</a></li>
+<li>吉澤らによる<a href="https://kaigi.org/jsai/webprogram/2010/pdf/286.pdf" target="_blank">「英作文授業におけるピアリヴュー活動」</a></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20100803.html">2010-08-03 クラウド化予測</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20100824.html">2010-08-24 クラウド時代のシミュレーション型BI</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>

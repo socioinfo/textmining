@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>ゼロ年代の情報技術を「情報技術」で振り返る | Take IT Easy</title>
+
+<link rel="stylesheet" href="http://easy.mri.co.jp/wp-content/themes/default/style.css" type="text/css" media="screen" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; フィード" href="http://park59.mri.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="Take IT Easy &raquo; コメントフィード" href="http://easy.mri.co.jp/comments/feed" />
+<meta name="generator" content="WordPress 3.5 - really-static 0.5" />
+
+<!-- Using Simple Yearly Archive Plugin v1.3.3 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+</head>
+<body class="archive date">
+
+<div class="logospace"><a href="http://www.mri.co.jp"><img class="logoimage" src="images/logo3.gif" alt="logo"/></a></div>
+
+<div id="page">
+
+<div id="header" role="banner">
+	<div id="headerimg">
+		<h1><a href="index.html">Take IT Easy</a></h1>
+		<div class="description">三菱総研が独自の視点からお届けする情報技術の最新トレンドコラム（隔週火曜日更新）</div>
+	</div>
+</div>
+<hr />
+
+	<div id="content" class="narrowcolumn" role="main">
+
+		<div class="space"></div>
+
+		<div class="post-date" style="float: left;"><small>2010年3月9日</small></div>
+<div style="float: right;">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Feasy.mri.co.jp%2F20100309.html&layout=button_count&show_faces=true&width=100&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; padding: 0;  overflow:hidden; width:100px; height:20px; display: inline;"></iframe>
+</div>
+
+		
+ 	  <!--
+ 	  		<h2 class="pagetitle"></h2>
+ 	  -->
+
+				<div class="post"   style="clear: both;">
+				<h2 id="post-613"><a href="http://easy.mri.co.jp/20100309.html" rel="bookmark" title="ゼロ年代の情報技術を「情報技術」で振り返る">ゼロ年代の情報技術を「情報技術」で振り返る</a></h2>
+				<div class="right"><small><a href="http://easy.mri.co.jp/author/iiojun/index.html" title="飯尾 淳 による投稿" rel="author">飯尾 淳</a></small></div>
+
+				<div class="entry">
+					<div class="entry">
+<p>失われた10年として名高いゼロ年代も、ITの世界ではいろいろと目覚ましい発展があった。
+2000年前後には「ラスト・ワン・マイル」とされていた光通信のボトルネック問題も現代では大きく状況が改善されている。
+それどころか当時からすると圧倒的に高速な通信が公衆電話網による無線通信で実現されようとしており、隔世の感があるといえなくもない。</p>
+<p>本コラム「週刊Take IT Easy」でも、1998年の暮れに始まり今日に至るまで、ゼロ年代のIT関連トピックを議論してきた。
+本稿ではその10年を振り返ってみたい。&hellip; それも本コラムらしく、ITを活用して。</p>
+<h4>テキストマイニングでバックナンバーを分析</h4>
+<p>
+などと格好良く書き出してみたが、要するに今回の話題は、過去の記事をテキストマイニングで分析してみた結果を紹介しようというものである。
+過去10年間の記事を振り返り、記事のデータをテキストマイニングで分析することによってゼロ年代の情報技術動向を概観してみようという試みだ。</p>
+<p>
+さて今回の分析は、1998年12月の第1回から2009年6月30日号までに発表された全部で516件の記事を対象とした（終わりが2009年6月となっているのは、分析を実施したタイミングが昨年の夏だったためである）。
+対象としたデータは空行を含めて36,374行、テキストファイルながらそのサイズにして3MBの大きさに及んだ。</p>
+<p>本コラム「週刊Take IT Easy」は、盆暮れなど特別な休日を除いてほぼ毎週継続して発表されてきた。
+また多くの研究員が交代で執筆しているため特定のテーマに偏ることなく、その時々で注目されている情報技術の様々な話題に触れている。
+この2点は本コラムの大きな特長といえるだろう。
+まさにそれこそが、本コラムをテキストマイニングすることでゼロ年代の情報技術動向を俯瞰できるのではないかと考えた理由である。</p>
+<p>テキストマイニングの実施には、樋口耕一氏による<a target="_blank" href="http://khc.sourceforge.net/">KH Coder</a>を利用した。
+このツールはオープンソース・ソフトウェアとして公開されており、誰でも自由に利用可能である。
+事前に一定のルールで対象データを整形しておく若干の手間を必要とするものの、準備さえ整えば比較的簡単に分析を進めることができる。</p>
+<h4>ネットワーク図とクラスター分析</h4>
+<p>では実際に分析した結果を紹介していこう。 次の図は、共起ネットワークグラフである。
+共起とは単位記事中に現れる単語の相関を表す概念をいう。
+同じ単語が記事中で同じように出現する場合、それらの単語間には強い関係があると考えられるだろう。
+そのような関連性の強さを測る概念として、共起の概念が使われる。</p>
+<p>ネットワーク図では、共起性の高い単語を結びつけるようにグラフを構成し、単語の配置を調整する。
+その結果として、関連性の高い単語はネットワーク図には近い位置に配置されるようになる。</p>
+<p><img src="images/20100309_11.png" width="450" alt="ネットワーク図" title="ネットワーク図" class="alignnone size-full wp-image-2606"></p>
+<p>続いて、階層的クラスタ分析を行った結果の図を示す。 階層的クラスタ分析も、単語の出現頻度に関係した代表的な分析方法である。
+出現頻度で構築される多次元空間上における単語間の距離を測り、その距離に基づいたクラスタリングによって各単語を分類する。
+階層的クラスタ分析とは個々の単語のまとまりに着目する分析のひとつだ。</p>
+<p><img src="images/20100309_2.png" width="450" alt="階層的クラスター分析" title="階層的クラスター分析" class="alignnone size-full wp-image-2607"></p>
+<p>これらの結果から、特定の単語が形作るいくつかのまとまりを読み取ることができるだろう。
+同じ文脈で語られる単語は近いグループにまとまる性質がある。
+それぞれのグループに属する単語の関連性に、この10年に頻繁に話題に出された情報技術トレンドの特徴が表れていることを確認してほしい。</p>
+<h4>コレスポンデンス分析でみるトレンドの推移</h4>
+<p>さらに次の図はコレスポンデンス分析の結果である。
+興味深いのは、この結果からゼロ年代における話題の移ろいを汲み取ることができるということだ。</p>
+<p><img src="images/20100309_3.png" width="450" alt="コレスポンデンス分析" title="コレスポンデンス分析" class="alignnone size-full wp-image-2608"></p>
+<p>この分析は、やはり出現頻度で定義される多次元空間上に置かれている各単語を、主たる成分で低次元化して可視化する分析手法である。
+図では、1999年（1998年12月を含む）から2008年、そして2009年前半まで、1年毎に単語の平均点をプロットしてある。
+この点はその年における話題の中心点と考えることができる。
+今回はさらに話題の遷移状況を明らかにすべく、その点を矢印で結んで話題遷移の明確化を試してみた。</p>
+<p>分析した結果を解釈してみよう。図からは、次のようなシナリオが浮かび上がる。</p>
+<ul><li>ゼロ年代以前、90年代の最後にはインターネットやPCの活用が話題に上っていた。</li>
+<li>ゼロ年代も半ばに差しかかると、オープンソースソフトウェアやインターネット検索技術といったトピックが増加する。</li>
+<li>ゼロ年代後半ではサービスの提供方法やサービス普及が話題の中心となった。</li>
+</ul><p>
+このように、個別の技術に注目していた時代からサービスの提供にシフトしていった様子を、コレスポンデンス分析の結果から改めて伺うことができる。</p>
+<h4>まとめと展望</h4>
+<p>以上の例から、あるテーマに関する一連の文献をテキストマイニングで分析すると全体の傾向を掴むことができることが分かるだろう。
+今回は対象が過去10年間の情報技術コラムであり、ゼロ年代の情報技術動向を炙り出すことができた。</p>
+<p>今回、本コラムの10年間を対象としてテキストマイニングを実施、その傾向を把握するためにいくつかの分析を実施した。
+新聞記事や雑誌の記事を対象として同様の解析をしても同じような傾向が掴めるだろうか？
+またIT以外の分野で長期間蓄積された記事データを分析すると、どのような傾向が出てくるだろうか？
+テキストマイニングによる記事データの分析は奥が深く、興味は尽きない。</p>
+<h4>(補足)</h4>
+<p>本記事は、先日、台北で開催された<a target="_blank" href="http://graphics.csie.ntu.edu.tw/pvis2010/">PacificVis2010</a>において発表した論文の概要を日本語で解説したものです。
+より詳しい内容を知りたい読者の皆様には論文をお送りします。 本コラムの問合せ窓口までご連絡下さい。</p>
+<h4 class="link">本文中のリンク・関連リンク：</h4>
+<ul><li>樋口耕一氏によるテキストマイニング・ツール：<a target="_blank" href="http://khc.sourceforge.net/">KH Coder</a></li>
+<li>2010年3月2日から5日にかけて台北で開催された情報可視化に関する国際会議、<a target="_blank" href="http://graphics.csie.ntu.edu.tw/pvis2010/">IEEE Pacific
+Visualization 2010</a></li>
+</ul></div>
+				</div>
+
+<!--
+				<p class="postmetadata">
+ 
+ | 
+  
+</p>
+-->
+
+			</div>
+
+		
+	
+
+
+<div class="navigation">
+  <div class="alignleft">≪<a href="http://easy.mri.co.jp/20100302.html">2010-03-02 情報資源を持つことの意味と意義</a></div>
+<div class="alignright"><a href="http://easy.mri.co.jp/20100316.html">2010-03-16 スマートフォンの活用による新たな情報提供のかたち</a> ≫</div>
+
+</div>
+	</div>
+
+	<div id="sidebar" role="complementary">
+
+		<ul>
+			<li id="text-3" class="widget widget_text"><h2 class="widgettitle">次回は1月22日に更新予定です。</h2>			<div class="textwidget">Take IT Easyは創刊以来週刊でお届けして参りましたが、2012年4月からは隔週とさせて頂きます。引き続きご愛顧のほどよろしくお願いいたします。</div>
+		</li><li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Take IT Easyについて</h2>		<ul>
+			<li class="page_item page-item-9"><a href="http://easy.mri.co.jp/greeting.html">創刊のご挨拶</a></li>
+<li class="page_item page-item-5"><a href="http://easy.mri.co.jp/authors.html">著者プロフィール</a></li>
+<li class="page_item page-item-3"><a href="http://easy.mri.co.jp/backnumber.html">バックナンバー一覧</a></li>
+<li class="page_item page-item-7"><a href="http://easy.mri.co.jp/inquiry.html">お問い合わせ</a></li>
+		</ul>
+		</li><li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">関連Webサイト</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://it-center.mri.co.jp/" target="_blank">情報技術研究センター</a></li>
+<li><a href="http://www.mri.co.jp/">株式会社三菱総合研究所</a></li>
+
+	</ul>
+</li>
+
+<li class="recent-posts">
+<script type="text/javascript" src="recent-posts.html"></script>
+</li>		
+</ul>
+<div>
+<!--- Search Google --> 
+<form action="http://www.google.co.jp/custom" method="get" target="contents"> 
+<a href="http://www.google.co.jp/" target="new"><img align="middle"
+ alt="Google" src="http://www.google.co.jp/logos/Logo_25wht.gif"
+ border="0" /></a> 
+<a href="http://feedmeter.net/detail.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" target="feedmeter"><img src="http://feedmeter.net/image.php?r=http%3A%2F%2Feasy.mri.co.jp%2Findex.rdf" border="0" width="60" height="36" alt="人気ブログランキング - Easy RSS" align="middle" /></a> 
+<input type="text" name="q" size="16" maxlength="256" value="" ></input> 
+<input type="submit" name="sa" value="Take IT Easy内検索"></input>
+<input type="hidden" name="sitesearch" value="easy.mri.co.jp"></input> 
+<input type="hidden" name="hl"  value="ja"></input> 
+<input type="hidden" name="filter" value="0"></input> 
+<input type="hidden" name="ie"  value="UTF-8"></input> 
+<input type="hidden" name="oe"  value="UTF-8"></input> 
+<input type="hidden" name="num" value="100"></input> 
+<input type="hidden" name="client" value="pub-5351251487211239"></input> 
+<input type="hidden" name="hl" value="ja"></input> 
+<input type="hidden" name="forid" value="1"></input> 
+<input type="hidden" name="channel" value="3917171880"></input> 
+<input type="hidden" name="cof" value="LH:62;LW:75;LP:1;FORID:1;"></input> 
+</form> 
+<!-- Search Google --> 
+</div>
+<div>
+<a href="http://park59.mri.co.jp/rss2.xml"><img align="middle" alt="RSS" border="0" src="rss.gif" /></a></div>
+<div>
+<a href="http://www3.clustrmaps.com/counter/maps.php?url=http://easy.mri.co.jp" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://easy.mri.co.jp" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /> 
+</a>
+
+<!-- <a href="http://www.geotargeting.jp/" target="_blank">ジオターゲティング</a> -->
+<script type="text/javascript">
+<!--
+geobp_id="131ae4deeca7487748dfd0bdfd7c89bb2205b63e";
+//--></script>
+<script type="text/javascript" src="http://parts.geotg.jp/geobp.js"></script>
+<noscript>JavaScriptをONにしてください。</noscript>
+<br />
+<!--
+<a href="http://nakanohito.jp/" target="new"><img src="http://nakanohito.jp/an/?u=145295&h=611314&w=96" border="0" width="96" height="96" alt="" /></a> 
+  -->
+<script type='text/javascript' language='JavaScript'
+        src='http://xslt.alexa.com/site_stats/js/s/a?url=easy.mri.co.jp'></script> 
+</div>
+
+	</div>
+
+
+
+<hr />
+<div id="footer" role="contentinfo">
+	<p>Copyright&copy; Mitsubishi Research Institute, Inc. 	</p>
+</div>
+</div>
+
+<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+
+		</body>
+</html>
